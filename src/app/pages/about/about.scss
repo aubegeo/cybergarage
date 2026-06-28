@@ -1,0 +1,303 @@
+.about-page {
+  background: var(--background-primary);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  &.narrow { max-width: 760px; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #2C3E50 0%, #4ECDC4 100%);
+  color: white;
+  padding: 5.5rem 0;
+  text-align: center;
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin: 0 0 0.75rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+    line-height: 1.1;
+  }
+
+  .role {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem;
+    opacity: 0.95;
+
+    span { color: #FFE66D; }
+  }
+
+  .lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    opacity: 0.95;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+
+  .material-icons { font-size: 1.2rem; }
+  &:hover { transform: translateY(-2px); }
+
+  &.btn-primary {
+    background: #FFE66D;
+    color: #2C3E50;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  }
+
+  &.btn-ghost {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* ===== SECTIONS ===== */
+.content-section {
+  padding: 4.5rem 0;
+
+  &.alt { background: var(--background-secondary); }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin: 0 0 1.25rem;
+
+    &.centered { text-align: center; }
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-size: 1.05rem;
+    margin: 0 0 1.25rem;
+
+    strong { color: var(--text-primary); }
+  }
+
+  .section-sub {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+  }
+}
+
+/* ===== STORYTELLING ===== */
+.story {
+  p {
+    font-size: 1.12rem;
+    line-height: 1.8;
+  }
+
+  .pull-quote {
+    margin: 2.25rem 0;
+    padding: 1.5rem 1.75rem;
+    border-left: 4px solid #4ECDC4;
+    background: var(--background-secondary);
+    border-radius: 0 12px 12px 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 760px;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.25rem;
+  padding-bottom: 2.25rem;
+
+  &:not(:last-child) .timeline-marker::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 56px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 0.5rem);
+    background: var(--border-color);
+  }
+
+  .timeline-marker {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--card-background);
+    border: 2px solid var(--border-color);
+
+    .material-icons { color: var(--text-secondary); font-size: 1.6rem; }
+  }
+
+  .timeline-body {
+    .period {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-secondary);
+      margin-bottom: 0.35rem;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+    }
+
+    p { margin: 0; font-size: 1rem; }
+  }
+
+  /* Étape actuelle : accent teal */
+  &.current .timeline-marker {
+    background: #4ECDC4;
+    border-color: #4ECDC4;
+    .material-icons { color: white; }
+  }
+  &.current .period { color: #4ECDC4; }
+
+  /* Objectifs : accent violet, marqueur en pointillé */
+  &.goal .timeline-marker {
+    border-style: dashed;
+    border-color: #6C5CE7;
+    .material-icons { color: #6C5CE7; }
+  }
+  &.goal .period { color: #6C5CE7; }
+}
+
+/* ===== VALEURS ===== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .value-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #4ECDC4 0%, #6C5CE7 100%);
+    margin-bottom: 1rem;
+
+    .material-icons { color: white; font-size: 1.7rem; }
+  }
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+  }
+
+  p { margin: 0; font-size: 0.95rem; line-height: 1.6; }
+}
+
+/* ===== CHIPS ===== */
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+
+  li {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
+
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #2C3E50 0%, #6C5CE7 100%);
+  color: white;
+  border-radius: 18px;
+  padding: 3.5rem 2rem;
+
+  h2 { color: white; margin: 0 0 0.75rem; }
+  p { color: rgba(255, 255, 255, 0.9); margin: 0 0 2rem; }
+
+  .btn-primary { background: #FFE66D; color: #2C3E50; }
+  .btn-ghost { color: white; border-color: rgba(255, 255, 255, 0.7); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem 0;
+    h1 { font-size: 2.3rem; }
+    .role { font-size: 1.1rem; }
+    .lead { font-size: 1.02rem; }
+  }
+
+  .content-section { padding: 3rem 0; }
+  .container { padding: 0 1.25rem; }
+  .values-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,151 @@
+<div class="blog-container">
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <i class="material-icons">article</i>
+        Blog Technique CyberGarage
+      </h1>
+      <p class="hero-description">
+        Explorez nos articles techniques couvrant l'automobile, la cybersécurité, 
+        le développement, l'électronique, les FPGA, le HPC, les télécommunications et la simulation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Chargement des articles...</p>
+  </div>
+
+  <!-- Main Content -->
+  <div *ngIf="!isLoading" class="blog-content">
+    
+    <!-- Featured Articles -->
+    <section class="featured-section">
+      <h2 class="section-title">
+        <i class="material-icons">star</i>
+        Articles en vedette
+      </h2>
+      
+      <div class="featured-grid">
+        <article *ngFor="let article of featuredArticles" class="featured-card">
+          <div class="card-header" [style.background]="'linear-gradient(135deg, ' + getCategoryInfo(article.category).color + ', ' + getCategoryInfo(article.category).color + '88)'">
+            <div class="category-badge">
+              <i class="material-icons">{{ getCategoryInfo(article.category).icon }}</i>
+              <span>{{ getCategoryInfo(article.category).name }}</span>
+            </div>
+            <div class="reading-time">{{ article.readTime }} min</div>
+          </div>
+          
+          <div class="card-body">
+            <h3 class="card-title">{{ article.title }}</h3>
+            <p class="card-summary">{{ article.summary }}</p>
+            
+            <div class="card-meta">
+              <div class="article-date">
+                <i class="material-icons">calendar_today</i>
+                <span>{{ article.date | date:'dd/MM/yyyy' }}</span>
+              </div>
+              <div class="article-tags">
+                <span *ngFor="let tag of article.tags.slice(0, 2)" class="tag">
+                  {{ tag }}
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a [routerLink]="['/article', article.category, article.id]" class="read-more-btn">
+              <span>Lire l'article</span>
+              <i class="material-icons">arrow_forward</i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Categories Grid -->
+    <section class="categories-section">
+      <h2 class="section-title">
+        <i class="material-icons">category</i>
+        Catégories techniques
+      </h2>
+      
+      <div class="categories-grid">
+        <div *ngFor="let category of categories" class="category-card">
+          <div class="category-header" [style.background-color]="category.color">
+            <i class="material-icons">{{ category.icon }}</i>
+          </div>
+          
+          <div class="category-body">
+            <h3>{{ category.name }}</h3>
+            <p class="article-count">
+              {{ getCategoryArticleCount(category.id) }} 
+              article{{ getCategoryArticleCount(category.id) > 1 ? 's' : '' }}
+            </p>
+          </div>
+          
+          <div class="category-footer">
+            <a [routerLink]="category.route" class="explore-btn">
+              <span>Explorer</span>
+              <i class="material-icons">explore</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Articles -->
+    <section class="recent-section">
+      <h2 class="section-title">
+        <i class="material-icons">schedule</i>
+        Articles récents
+      </h2>
+      
+      <div class="articles-list">
+        <article *ngFor="let article of recentArticles" class="article-item">
+          <div class="article-icon" [style.color]="getCategoryInfo(article.category).color">
+            <i class="material-icons">{{ getCategoryInfo(article.category).icon }}</i>
+          </div>
+          
+          <div class="article-content">
+            <div class="article-header">
+              <span class="category-label" [style.color]="getCategoryInfo(article.category).color">
+                {{ getCategoryInfo(article.category).name }}
+              </span>
+              <span class="reading-time">{{ article.readTime }} min</span>
+            </div>
+            
+            <h3 class="article-title">
+              <a [routerLink]="['/article', article.category, article.id]">
+                {{ article.title }}
+              </a>
+            </h3>
+            
+            <p class="article-excerpt">{{ article.summary }}</p>
+            
+            <div class="article-footer">
+              <span class="article-date">
+                <i class="material-icons">today</i>
+                {{ article.date | date:'dd MMM yyyy' }}
+              </span>
+              <div class="article-tags">
+                <span *ngFor="let tag of article.tags.slice(0, 3)" class="tag-small">
+                  #{{ tag }}
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="article-action">
+            <a [routerLink]="['/article', article.category, article.id]" class="read-link">
+              <i class="material-icons">arrow_forward_ios</i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</div>

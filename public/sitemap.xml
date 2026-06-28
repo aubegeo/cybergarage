@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Pages vitrine -->
+  <url><loc>https://cybergarage.tech/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cybergarage.tech/competences</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cybergarage.tech/projets</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cybergarage.tech/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cybergarage.tech/contact</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cybergarage.tech/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Catégories -->
+  <url><loc>https://cybergarage.tech/automobile</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/dev-info</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cybergarage.tech/ia-master</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cybergarage.tech/cybersecurity</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/fpga</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/mechanical</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/electronics</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/pragmatic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/hpc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/telecom</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cybergarage.tech/simulation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Articles -->
+  <url><loc>https://cybergarage.tech/article/automobile/freinage-regeneratif</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/cybersecurity/zero-trust-architecture</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/dev-info/microservices-docker-kubernetes</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/electronics/onduleurs-solaires</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/fpga/traitement-video-temps-reel</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/hpc/optimisation-gpu</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/telecom/reseaux-intelligents</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://cybergarage.tech/article/simulation/simulation-physique</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>

@@ -1,0 +1,46 @@
+<div class="projets-page">
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Réalisations</p>
+      <h1>Des projets, pas seulement des compétences</h1>
+      <p class="hero-pitch">
+        La meilleure preuve d'un savoir-faire, c'est ce qu'il produit. Voici des projets
+        que j'ai menés <strong>de bout en bout</strong> — conception, développement, mise en production.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/competences" class="btn btn-ghost">
+          <i class="material-icons">workspace_premium</i> Mes compétences
+        </a>
+        <a routerLink="/contact" class="btn btn-primary">
+          <i class="material-icons">mail</i> Me contacter
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="projects-grid">
+      <article class="project-card" *ngFor="let p of projects" [style.--accent]="p.color">
+        <header class="project-head">
+          <div class="project-icon"><i class="material-icons">{{ p.icon }}</i></div>
+          <span class="status" [class.prod]="p.status === 'En production'"
+                [class.dev]="p.status === 'En développement'">{{ p.status }}</span>
+        </header>
+        <h2>{{ p.name }}</h2>
+        <p class="tagline">{{ p.tagline }}</p>
+        <p class="desc">{{ p.description }}</p>
+        <ul class="stack">
+          <li *ngFor="let tech of p.stack">{{ tech }}</li>
+        </ul>
+      </article>
+    </div>
+
+    <section class="cta">
+      <h2>Envie d'en savoir plus sur l'un de ces projets&nbsp;?</h2>
+      <p>Architecture, choix techniques, résultats — je détaille volontiers.</p>
+      <a routerLink="/contact" class="btn btn-primary">
+        <i class="material-icons">handshake</i> Discutons-en
+      </a>
+    </section>
+  </main>
+</div>

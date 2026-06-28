@@ -1,0 +1,130 @@
+:host {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.article-viewer {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.article-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-bottom: 1px solid #dee2e6;
+
+  .article-category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #2c3e50;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #6c757d;
+      font-size: 0.9rem;
+
+      .material-icons {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .article-tags .tag {
+    display: inline-block;
+    background: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-summary {
+    font-size: 1.125rem;
+    color: #6c757d;
+    margin: 1.5rem 0 0;
+    font-style: italic;
+    line-height: 1.5;
+  }
+}
+
+.article-content {
+  padding: 2rem;
+
+  .content-body {
+    h1, h2, h3 {
+      margin: 2rem 0 1rem;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; border-bottom: 2px solid #e9ecef; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.5rem; }
+
+    p { margin: 1rem 0; text-align: justify; }
+    
+    ul, ol { margin: 1rem 0; padding-left: 2rem; }
+    
+    code {
+      background: #f8f9fa;
+      color: #e83e8c;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+
+    pre {
+      background: #2d3748;
+      color: #e2e8f0;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      font-family: 'Courier New', monospace;
+
+      code { background: transparent; color: inherit; padding: 0; }
+    }
+
+    .math-block {
+      margin: 1.5rem 0;
+      text-align: center;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #007bff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :host { padding: 1rem; }
+  .article-header { padding: 1.5rem; .article-title { font-size: 2rem; } }
+  .article-content { padding: 1.5rem; }
+}

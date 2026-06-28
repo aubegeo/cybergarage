@@ -1,0 +1,90 @@
+<div class="competences-page">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Geoffrey Aubert</p>
+      <h1>Développeur Senior <span>Java / Angular</span></h1>
+      <p class="hero-pitch">
+        En route vers <strong>Lead Developer</strong> &amp; <strong>Architecte</strong>.
+        Cette page rassemble mon <strong>savoir-faire</strong> technique et mon
+        <strong>savoir-être</strong> — et chaque compétence est adossée à du concret.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/contact" class="btn btn-primary">
+          <i class="material-icons">mail</i> Me contacter
+        </a>
+        <a routerLink="/blog" class="btn btn-ghost">
+          <i class="material-icons">article</i> Voir mes articles
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <!-- SAVOIR-FAIRE -->
+    <section class="block">
+      <div class="block-head">
+        <i class="material-icons">build</i>
+        <div>
+          <h2>Savoir-faire</h2>
+          <p>Ce que je sais concevoir, construire et livrer.</p>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-group" *ngFor="let group of savoirFaire"
+                 [style.--accent]="group.color">
+          <header class="group-head">
+            <i class="material-icons">{{ group.icon }}</i>
+            <h3>{{ group.title }}</h3>
+          </header>
+          <ul class="skill-list">
+            <li class="skill" *ngFor="let skill of group.skills">
+              <div class="skill-top">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ skill.level }}</span>
+              </div>
+              <div class="bar"><span class="bar-fill" [style.width.%]="skill.pct"></span></div>
+              <a *ngIf="skill.proof" class="skill-proof" [routerLink]="skill.proof.route">
+                <i class="material-icons">verified</i> Preuve : {{ skill.proof.label }}
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SAVOIR-ÊTRE -->
+    <section class="block">
+      <div class="block-head">
+        <i class="material-icons">favorite</i>
+        <div>
+          <h2>Savoir-être</h2>
+          <p>Comment je travaille avec les autres — démontré, pas affirmé.</p>
+        </div>
+      </div>
+
+      <div class="soft-grid">
+        <article class="soft-card" *ngFor="let soft of savoirEtre">
+          <div class="soft-icon"><i class="material-icons">{{ soft.icon }}</i></div>
+          <h3>{{ soft.title }}</h3>
+          <p>{{ soft.text }}</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA recruteurs / clients -->
+    <section class="cta">
+      <h2>Un Lead Dev / Architecte ou un expert pour votre mission&nbsp;?</h2>
+      <p>Recrutement (CDI), prestation en ESN ou mission freelance — parlons de votre besoin.</p>
+      <div class="hero-actions">
+        <a routerLink="/contact" class="btn btn-primary">
+          <i class="material-icons">handshake</i> Discutons-en
+        </a>
+        <a routerLink="/about" class="btn btn-ghost">
+          <i class="material-icons">person</i> Mon parcours
+        </a>
+      </div>
+    </section>
+  </main>
+</div>

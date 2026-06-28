@@ -1,0 +1,202 @@
+<div class="home-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Geoffrey Aubert — Développeur Senior Java / Angular</p>
+        <h1 class="hero-title">
+          Je conçois des systèmes<br><span class="brand-highlight">qui durent.</span>
+        </h1>
+        <p class="hero-description">
+          Ingénieur devenu artisan développeur, en route vers <strong>Lead&nbsp;Dev</strong> &amp;
+          <strong>Architecte</strong>. <strong>CyberGarage</strong> est ma vitrine&nbsp;: mon
+          savoir-faire technique, mon savoir-être, et la preuve par l'écrit.
+        </p>
+        <div class="hero-actions">
+          <a routerLink="/competences" class="hero-btn primary">
+            <i class="material-icons">workspace_premium</i> Mes compétences
+          </a>
+          <a routerLink="/projets" class="hero-btn ghost">
+            <i class="material-icons">work</i> Mes projets
+          </a>
+          <a routerLink="/about" class="hero-btn ghost">
+            <i class="material-icons">person</i> Mon parcours
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="tech-grid">
+          <div class="tech-icon"><i class="material-icons">directions_car</i></div>
+          <div class="tech-icon"><i class="material-icons">code</i></div>
+          <div class="tech-icon"><i class="material-icons">smart_toy</i></div>
+          <div class="tech-icon"><i class="material-icons">security</i></div>
+          <div class="tech-icon"><i class="material-icons">memory</i></div>
+          <div class="tech-icon"><i class="material-icons">architecture</i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Piliers : Savoir / Savoir-faire / Savoir-être -->
+  <section class="pillars-section">
+    <div class="section-header">
+      <h2>Savoir, savoir-faire, savoir-être</h2>
+      <p>Une vitrine en trois dimensions — et chaque dimension est adossée à du concret.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <a routerLink="/blog" class="pillar-card">
+        <div class="pillar-icon savoir"><i class="material-icons">menu_book</i></div>
+        <h3>Le savoir</h3>
+        <p>Des sujets techniques expliqués clairement, dans l'esprit ByteByteGo. La preuve que je comprends en profondeur.</p>
+        <span class="pillar-link">Lire le blog <i class="material-icons">arrow_forward</i></span>
+      </a>
+
+      <a routerLink="/competences" class="pillar-card">
+        <div class="pillar-icon faire"><i class="material-icons">build</i></div>
+        <h3>Le savoir-faire</h3>
+        <p>Java, Angular, architecture, System Design, IA — et des projets réels qui le démontrent.</p>
+        <span class="pillar-link">Voir mes compétences <i class="material-icons">arrow_forward</i></span>
+      </a>
+
+      <a routerLink="/about" class="pillar-card">
+        <div class="pillar-icon etre"><i class="material-icons">favorite</i></div>
+        <h3>Le savoir-être</h3>
+        <p>Craftsmanship, pragmatisme, partage, leadership : ma façon de travailler avec les autres.</p>
+        <span class="pillar-link">Découvrir mon parcours <i class="material-icons">arrow_forward</i></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-section">
+    <div class="section-header">
+      <h2>Mes domaines d'expertise</h2>
+      <p>De l'automobile au FPGA, un éventail technique qui reflète ma curiosité d'ingénieur.</p>
+    </div>
+
+    <div class="categories-grid">
+      <a *ngFor="let category of (categories$ | async)"
+           class="category-card"
+           [routerLink]="category.route"
+           [style.border-left-color]="getCategoryColor(category)">
+
+        <div class="category-icon" [style.color]="getCategoryColor(category)">
+          <i class="material-icons">{{ getCategoryIcon(category) }}</i>
+        </div>
+
+        <div class="category-content">
+          <h3 class="category-title">{{ category.name }}</h3>
+          <p class="category-description">{{ category.description }}</p>
+
+          <div class="category-meta">
+            <span class="article-count" *ngIf="category.articleCount > 0">
+              {{ category.articleCount }} articles
+            </span>
+            <span class="read-more">
+              Découvrir
+              <i class="material-icons">arrow_forward</i>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Articles Section -->
+  <section class="featured-section" *ngIf="(featuredArticles$ | async)?.length">
+    <div class="section-header">
+      <h2>Articles en vedette</h2>
+      <p>Les contenus techniques sélectionnés pour vous</p>
+    </div>
+
+    <div class="featured-layout">
+      <div class="articles-sidebar">
+        <div *ngFor="let article of (featuredArticles$ | async); let i = index"
+             class="article-card"
+             [class.active]="selectedArticle?.id === article.id"
+             (click)="onArticleSelect(article)">
+
+          <div class="article-category-badge"
+               [style.background-color]="'var(--category-color-' + article.category + ')'">
+            {{ article.category | titlecase }}
+          </div>
+
+          <h4 class="article-title">{{ article.title }}</h4>
+          <p class="article-summary">{{ article.summary }}</p>
+
+          <div class="article-meta">
+            <span class="read-time">{{ article.readTimeMinutes }} min</span>
+            <span class="publish-date">{{ article.publishedDate | date:'dd MMM' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-preview">
+        <app-article-viewer [article]="selectedArticle" *ngIf="selectedArticle"></app-article-viewer>
+
+        <div class="no-selection" *ngIf="!selectedArticle">
+          <i class="material-icons">article</i>
+          <h3>Sélectionnez un article</h3>
+          <p>Choisissez un article dans la liste pour le prévisualiser ici.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Articles Quick List -->
+  <section class="latest-section" *ngIf="(latestArticles$ | async)?.length">
+    <div class="section-header">
+      <h2>Derniers articles</h2>
+      <a routerLink="/blog" class="view-all">
+        Voir tous les articles
+        <i class="material-icons">arrow_forward</i>
+      </a>
+    </div>
+
+    <div class="latest-articles">
+      <a *ngFor="let article of (latestArticles$ | async)"
+           class="latest-card"
+           [routerLink]="['/article', article.category, article.slug]">
+
+        <div class="latest-meta">
+          <span class="category-tag"
+                [style.color]="'var(--category-color-' + article.category + ')'">
+            {{ article.category | titlecase }}
+          </span>
+          <span class="publish-date">{{ article.publishedDate | date:'dd MMM yyyy' }}</span>
+        </div>
+
+        <h4 class="latest-title">{{ article.title }}</h4>
+        <p class="latest-summary">{{ article.summary }}</p>
+
+        <div class="latest-footer">
+          <span class="read-time">{{ article.readTimeMinutes }} min de lecture</span>
+          <i class="material-icons">arrow_forward</i>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Travaillons ensemble</h2>
+      <p>
+        Recrutement (CDI), prestation en ESN ou mission freelance —
+        je serai ravi d'échanger sur votre besoin.
+      </p>
+      <div class="cta-actions">
+        <a class="cta-btn primary" routerLink="/contact">
+          <i class="material-icons">handshake</i>
+          Me contacter
+        </a>
+        <a class="cta-btn secondary" routerLink="/projets">
+          <i class="material-icons">work</i>
+          Voir mes réalisations
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

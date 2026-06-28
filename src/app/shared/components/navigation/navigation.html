@@ -1,0 +1,105 @@
+<nav class="main-navigation">
+  <!-- Logo et brand -->
+  <div class="nav-brand">
+    <a routerLink="/" class="brand-link" (click)="closeMobileMenu()">
+      <div class="brand-icon">
+        <i class="material-icons">precision_manufacturing</i>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">CyberGarage</span>
+        <span class="brand-tagline">Tech Engineering Hub</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Bouton mobile menu -->
+  <button class="mobile-menu-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Menu principal -->
+  <div class="nav-menu" [class.mobile-open]="isMobileMenuOpen">
+    <!-- Navigation principale -->
+    <ul class="nav-items">
+      <li class="nav-item" *ngFor="let item of navigationItems">
+        <!-- Item simple sans enfants -->
+        <a *ngIf="!item.children" 
+           [routerLink]="item.route" 
+           class="nav-link"
+           [class.active]="isActiveRoute(item.route)"
+           (click)="closeMobileMenu()">
+          <i class="material-icons" *ngIf="item.icon">{{ item.icon }}</i>
+          <span>{{ item.label }}</span>
+        </a>
+
+        <!-- Item avec sous-menu (Catégories) -->
+        <div *ngIf="item.children" class="nav-dropdown">
+          <button class="nav-link dropdown-toggle" 
+                  [class.active]="activeSubmenu === item.label"
+                  (click)="toggleSubmenu(item.label)">
+            <i class="material-icons" *ngIf="item.icon">{{ item.icon }}</i>
+            <span>{{ item.label }}</span>
+            <i class="material-icons dropdown-arrow" 
+               [class.rotated]="activeSubmenu === item.label">expand_more</i>
+          </button>
+
+          <!-- Sous-menu des catégories -->
+          <div class="dropdown-menu" [class.show]="activeSubmenu === item.label">
+            <div class="categories-grid">
+              <div *ngFor="let category of (categories$ | async)" 
+                   class="category-card"
+                   [style.border-left-color]="getCategoryColor(category)"
+                   (click)="onCategoryClick(category)">
+                <div class="category-icon" [style.color]="getCategoryColor(category)">
+                  <i class="material-icons">{{ getCategoryIcon(category) }}</i>
+                </div>
+                <div class="category-info">
+                  <h4 class="category-name">{{ category.name }}</h4>
+                  <p class="category-description">{{ category.description }}</p>
+                  <span class="category-count" *ngIf="category.articleCount > 0">
+                    {{ category.articleCount }} articles
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Actions secondaires -->
+    <div class="nav-actions">
+      <button class="theme-toggle" (click)="toggleTheme()" [title]="isDarkMode ? 'Mode clair' : 'Mode sombre'">
+        <i class="material-icons">{{ isDarkMode ? 'light_mode' : 'dark_mode' }}</i>
+      </button>
+      
+      <button class="search-toggle" (click)="toggleSearch()" title="Rechercher">
+        <i class="material-icons">search</i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Overlay pour mobile -->
+  <div class="mobile-overlay" 
+       [class.show]="isMobileMenuOpen" 
+       (click)="closeMobileMenu()"></div>
+</nav>
+
+<!-- Navigation rapide des catégories (visible sur desktop) -->
+<div class="quick-categories" *ngIf="!isMobileMenuOpen">
+  <div class="categories-bar">
+    <div class="categories-scroll">
+      <a *ngFor="let category of (categories$ | async)" 
+         [routerLink]="category.route"
+         class="quick-category"
+         [class.active]="isActiveRoute(category.route)"
+         [style.color]="getCategoryColor(category)"
+         [title]="category.description">
+        <i class="material-icons">{{ getCategoryIcon(category) }}</i>
+        <span>{{ category.name }}</span>
+      </a>
+    </div>
+  </div>
+</div>
