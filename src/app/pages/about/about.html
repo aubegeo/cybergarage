@@ -1,0 +1,144 @@
+<div class="about-page">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-content">
+      <p class="eyebrow">À propos</p>
+      <h1>Geoffrey Aubert</h1>
+      <p class="role">Développeur Senior <span>Java / Angular</span> — en route vers Lead&nbsp;Dev &amp; Architecte</p>
+      <p class="lead">
+        Je construis des applications full-stack robustes et je partage ce que j'apprends.
+        <strong>CyberGarage</strong> est ma vitrine : mon savoir-faire, mon savoir-être, et la
+        preuve par l'écrit.
+      </p>
+      <div class="actions">
+        <a routerLink="/competences" class="btn btn-primary"><i class="material-icons">workspace_premium</i> Mes compétences</a>
+        <a routerLink="/projets" class="btn btn-ghost"><i class="material-icons">work</i> Mes projets</a>
+        <a routerLink="/contact" class="btn btn-ghost"><i class="material-icons">mail</i> Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- MON PARCOURS (storytelling) -->
+    <section class="content-section">
+      <div class="container narrow story">
+        <h2>Du cambouis au code</h2>
+
+        <p>
+          Petit, je voulais être <strong>mécanicien</strong>. Pas par défaut&nbsp;: par fascination.
+          J'avais besoin de comprendre comment les choses tournent — mettre les mains dans le moteur,
+          démonter pour voir ce qu'il y a dedans, et le remonter en mieux.
+        </p>
+
+        <p>
+          Je me revois encore, ado, le carburateur de la mobylette en pièces détachées sur un vieux
+          torchon, au fond du garage. Personne ne m'avait rien demandé&nbsp;: elle toussait, et je
+          voulais <em>savoir pourquoi</em>. J'ai tout démonté, nettoyé chaque gicleur, remonté à
+          tâtons. Quand elle a redémarré du premier coup, j'ai ressenti quelque chose que je cherche
+          encore aujourd'hui&nbsp;: la satisfaction tranquille de réparer ce que les autres abandonnent.
+        </p>
+
+        <p>
+          Cette envie de comprendre les systèmes m'a mené plus loin que l'atelier. Je suis devenu
+          <strong>ingénieur en mécanique et systèmes industriels</strong>&nbsp;: je suis passé du geste
+          — réparer une pièce — à la conception. Penser une chaîne complète, ses contraintes, ses
+          tolérances, ses points de rupture.
+        </p>
+
+        <p>
+          Et puis il y a eu un <strong>DUT informatique</strong>. Un détour, croyais-je. En réalité,
+          une révélation&nbsp;: j'y ai retrouvé, intacte, la mécanique que j'aimais.
+        </p>
+
+        <p>
+          Le déclic est venu un soir de TP, sur un bug que je traquais depuis deux heures. En suivant
+          la donnée pas à pas, ligne après ligne, j'ai eu <em>exactement</em> la sensation du garage&nbsp;:
+          ouvrir le capot, remonter la chaîne, trouver la pièce coincée. Ce n'était pas une image —
+          c'était le même geste.
+        </p>
+
+        <p>
+          Car un programme, c'est une <strong>mécanique</strong>. Les fonctions sont des engrenages&nbsp;:
+          chacune fait une chose, et l'ensemble doit s'emboîter sans jeu. Un flux de données, c'est une
+          chaîne cinématique — l'information qui passe d'un organe à l'autre. La gestion d'erreur, ce sont
+          les <strong>tolérances</strong>&nbsp;: ce qui tient quand la réalité ne ressemble pas au plan.
+          Et le refactoring&nbsp;? De la <strong>maintenance</strong>&nbsp;: on démonte, on nettoie, on
+          remonte en mieux, sans casser ce qui marchait.
+        </p>
+
+        <blockquote class="pull-quote">
+          J'ai compris ce jour-là que je n'avais pas changé de métier. J'avais juste changé de matière.
+          Le bon geste, le bon outil, l'obsession du « bien fait »&nbsp;: c'est le même artisanat.
+        </blockquote>
+
+        <p>
+          Aujourd'hui, c'est exactement comme ça que je code, en <strong>Java</strong> comme en
+          <strong>Angular</strong>&nbsp;: en artisan. Je cherche la pièce simple et solide plutôt que
+          l'usine à gaz. Parce qu'un code qui a l'air simple, c'est souvent qu'il y a beaucoup de travail
+          derrière — et c'est précisément ce travail-là qui me plaît.
+        </p>
+      </div>
+    </section>
+
+    <!-- TRAJECTOIRE -->
+    <section class="content-section alt">
+      <div class="container">
+        <h2 class="centered">Ma trajectoire</h2>
+        <p class="section-sub">Senior&nbsp;Dev → Lead&nbsp;Dev → Architecte. Une progression assumée, pas subie.</p>
+
+        <ol class="timeline">
+          <li class="timeline-item" *ngFor="let step of timeline" [class]="step.state">
+            <div class="timeline-marker"><i class="material-icons">{{ step.icon }}</i></div>
+            <div class="timeline-body">
+              <span class="period">{{ step.period }}</span>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- VALEURS -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="centered">Ma façon de travailler</h2>
+        <div class="values-grid">
+          <article class="value-card" *ngFor="let v of values">
+            <div class="value-icon"><i class="material-icons">{{ v.icon }}</i></div>
+            <h3>{{ v.title }}</h3>
+            <p>{{ v.text }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE / BLOG -->
+    <section class="content-section alt">
+      <div class="container narrow">
+        <h2 class="centered">Pourquoi CyberGarage</h2>
+        <p class="section-sub">
+          Un blog technique transversal qui sert de preuve à mes compétences — et de terrain de
+          partage. Les domaines que j'y explore&nbsp;:
+        </p>
+        <ul class="chips">
+          <li *ngFor="let item of expertise">{{ item }}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content-section">
+      <div class="container">
+        <div class="cta">
+          <h2>Travaillons ensemble</h2>
+          <p>Recrutement (CDI), prestation en ESN ou mission freelance — je serai ravi d'échanger.</p>
+          <div class="actions">
+            <a routerLink="/contact" class="btn btn-primary"><i class="material-icons">handshake</i> Discutons-en</a>
+            <a routerLink="/projets" class="btn btn-ghost"><i class="material-icons">work</i> Voir mes réalisations</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
