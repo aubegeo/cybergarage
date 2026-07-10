@@ -10,3 +10,6 @@ Catégorie : `telecom`
 - DNS over HTTPS / DoH (RFC 8484) — https://www.rfc-editor.org/rfc/rfc8484 `[libre]`
 - WebSocket (RFC 6455) — https://www.rfc-editor.org/rfc/rfc6455 `[libre]`
 - MQTT 5.0 (OASIS) — https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html `[libre]`
+- HTTP/1.1 Messaging (RFC 9112) — https://www.rfc-editor.org/rfc/rfc9112 `[libre]`
+- IPv6 (RFC 8200) — https://www.rfc-editor.org/rfc/rfc8200 `[libre]`
+- gRPC — Documentation — https://grpc.io/docs/ `[libre]`
