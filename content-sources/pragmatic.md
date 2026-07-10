@@ -4,7 +4,7 @@ Catégorie : `pragmatic`
 
 - GenAI et développeurs — `[fait]`
 - The Twelve-Factor App — `[fait]`
-- Semantic Versioning (SemVer 2.0) — https://semver.org/ `[libre]`
+- Semantic Versioning (SemVer 2.0) — https://semver.org/ `[libre]` `[fait]`
 - Conventional Commits — https://www.conventionalcommits.org/ `[libre]`
 - Keep a Changelog — https://keepachangelog.com/ `[libre]`
 - Manifeste Agile — https://agilemanifesto.org/ `[libre]`

@@ -26,7 +26,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   electronics: ['onduleurs-solaires'],
   fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
   mechanical: [],
-  pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
+  pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app', 'semantic-versioning-2'],
   hpc: ['optimisation-gpu'],
   telecom: ['reseaux-intelligents'],
   simulation: ['simulation-physique'],
