@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of, BehaviorSubject, map, catchError } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 import { Article, CategoryType } from '../models/article';
+import { ARTICLE_CATALOG } from '../content-catalog';
 
 export interface ArticleMeta {
   title: string;
@@ -146,20 +147,8 @@ export class ArticlesService {
     }
   ];
 
-  // Catalogue des articles disponibles
-  private readonly articleCatalog: { [category: string]: string[] } = {
-    automobile: ['freinage-regeneratif'],
-    cybersecurity: ['zero-trust-architecture'],
-    'dev-info': ['microservices-docker-kubernetes'],
-    'ia-master': [],
-    electronics: ['onduleurs-solaires'],
-    fpga: ['traitement-video-temps-reel'],
-    mechanical: [],
-    pragmatic: [],
-    hpc: ['optimisation-gpu'],
-    telecom: ['reseaux-intelligents'],
-    simulation: ['simulation-physique']
-  };
+  // Catalogue des articles disponibles (source unique partagée avec le sitemap)
+  private readonly articleCatalog: { [category: string]: string[] } = ARTICLE_CATALOG;
 
   constructor() {
     this.initializeCategories();

@@ -1,0 +1,63 @@
+---
+title: "The Twelve-Factor App : 12 principes pour des applications prêtes pour le cloud"
+category: pragmatic
+date: 2026-07-10
+author: Geoffrey Aubert
+tags: ["architecture", "cloud", "devops", "bonnes-pratiques", "saas"]
+summary: "Portabilité, scalabilité, parité dev/prod : la méthodologie Twelve-Factor App formalise en 12 principes ce qui distingue une application cloud-ready d'un logiciel qui souffrira en production. Revue des 12 facteurs, d'après la source officielle."
+readTime: 8
+---
+
+# The Twelve-Factor App : 12 principes pour des applications prêtes pour le cloud
+
+Pourquoi certaines applications se déploient sans douleur, scalent horizontalement et se comportent pareil en dev et en prod, tandis que d'autres deviennent un cauchemar dès qu'on quitte le poste du développeur ? En 2011, des ingénieurs de Heroku ont synthétisé, à partir de centaines de déploiements, une méthodologie devenue une référence : **The Twelve-Factor App** ([12factor.net](https://12factor.net)).
+
+L'objectif, tel que défini par la source officielle : des applications qui utilisent des **formats déclaratifs** (onboarding rapide), **maximisent la portabilité** entre environnements, se **déploient sur le cloud** sans friction, **minimisent l'écart entre dev et prod**, et **scalent sans refonte architecturale**. Valable dans n'importe quel langage.
+
+Voici les 12 facteurs, avec leur intitulé officiel.
+
+## I. Codebase
+*Une seule base de code suivie en gestion de version, plusieurs déploiements.* Un même code alimente le dev, la staging et la prod — ce sont des déploiements différents, pas des dépôts différents.
+
+## II. Dependencies
+*Déclarer et isoler explicitement les dépendances.* L'application ne présume jamais qu'un paquet existe sur le système : tout est déclaré (manifeste) et isolé. Fini le « ça marche chez moi ».
+
+## III. Config
+*Stocker la configuration dans l'environnement.* Tout ce qui varie entre déploiements (identifiants, URLs de services, secrets) vit dans des variables d'environnement, **hors du code**. Corollaire : on ne commite jamais un secret.
+
+## IV. Backing Services
+*Traiter les services externes comme des ressources attachées.* Base de données, file de messages, cache, service mail… sont des ressources interchangeables, référencées par une URL/configuration. On doit pouvoir remplacer une base locale par une base managée sans changer le code.
+
+## V. Build, Release, Run
+*Séparer strictement les étapes de build, de release et de run.* Le build produit un artefact, la release y associe une config, le run l'exécute. Chaque release est immuable et identifiable — ce qui rend les rollbacks triviaux.
+
+## VI. Processes
+*Exécuter l'application comme un ou plusieurs processus sans état.* Aucune donnée persistante en mémoire ou sur le disque local du processus : tout état durable va dans un backing service. C'est **la** condition pour scaler horizontalement.
+
+## VII. Port Binding
+*Exposer les services via un port.* L'application est autonome : elle embarque son serveur et écoute sur un port, sans dépendre d'une injection dans un serveur applicatif externe.
+
+## VIII. Concurrency
+*Scaler via le modèle de processus.* On monte en charge en ajoutant des processus (horizontalement), plutôt qu'en grossissant un seul processus. Les processus sont des citoyens de première classe.
+
+## IX. Disposability
+*Démarrage rapide et arrêt propre (graceful shutdown).* Les processus peuvent être démarrés ou arrêtés à tout moment. Un arrêt propre (finir la requête en cours, relâcher les ressources) rend l'application robuste aux redéploiements et à l'élasticité.
+
+## X. Dev/Prod Parity
+*Garder le développement, la staging et la production aussi proches que possible.* Réduire les écarts de temps (déployer souvent), de personnes (ceux qui écrivent déploient) et d'outils (même type de backing services partout). C'est le meilleur antidote aux bugs « seulement en prod ».
+
+## XI. Logs
+*Traiter les logs comme des flux d'événements.* L'application n'écrit pas dans des fichiers : elle émet son flux d'événements sur la sortie standard. L'environnement d'exécution se charge de le router, l'agréger et l'archiver.
+
+## XII. Admin Processes
+*Exécuter les tâches d'administration comme des processus ponctuels.* Migrations de base, scripts de maintenance : lancés dans le **même environnement** et avec le même code que l'application, pas bricolés à part.
+
+## Pourquoi ça reste d'actualité
+
+Écrite avant l'ère Kubernetes, la méthodologie décrit en réalité l'ADN d'une application **cloud-native** : sans état, configurable par l'environnement, jetable, observable. La plupart des plateformes modernes (conteneurs, orchestrateurs, PaaS) ne font que **présupposer** ces 12 facteurs. Les respecter, c'est se donner la portabilité et la scalabilité *par construction* ; les ignorer, c'est accumuler une dette qui se paie au premier passage à l'échelle.
+
+Pour un lead ou un architecte, les Twelve-Factor forment une excellente **grille de revue** : passer une application au crible de ces 12 points révèle vite ses points de friction futurs.
+
+## Sources
+- **Source officielle** : *The Twelve-Factor App*, Adam Wiggins — https://12factor.net
+- Détail de chaque facteur : https://12factor.net/ (un chapitre par facteur, ex. https://12factor.net/config)
