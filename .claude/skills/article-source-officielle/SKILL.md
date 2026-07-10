@@ -24,12 +24,12 @@ La documentation de l'éditeur/du projet, pas un article tiers. Exemples :
 - Réseaux/embarqué : RFC, doc constructeur, normes citées nommément.
 
 ## Étape 0 — Piocher un sujet + une source
-Consulter d'abord **`CONTENT-SOURCES.md`** (à la racine du dépôt) : c'est le catalogue des
-sources officielles, organisé par catégorie, que l'utilisateur enrichit. Choisir de préférence
-une entrée `[libre]` non encore marquée `[fait]`, dans une catégorie sous-représentée
-(cf. `src/app/shared/content-catalog.ts`). Vérifier que le slug n'existe pas déjà dans le
-catalogue. Si l'utilisateur a imposé un sujet, l'utiliser. Après publication, on peut cocher
-l'entrée `[fait]` dans `CONTENT-SOURCES.md`.
+Consulter d'abord le catalogue **`content-sources/<categorie>.md`** (un fichier par catégorie ;
+voir `content-sources/README.md`) : ce sont les sources officielles que l'utilisateur enrichit.
+Choisir de préférence une entrée `[libre]` non encore marquée `[fait]`, dans une catégorie
+sous-représentée (cf. `src/app/shared/content-catalog.ts`). Vérifier que le slug n'existe pas
+déjà dans le catalogue. Si l'utilisateur a imposé un sujet, l'utiliser. Après publication, cocher
+l'entrée `[fait]` dans le fichier `content-sources/<categorie>.md` correspondant.
 
 ## Étape 1 — Récupérer la source
 Essayer d'abord l'outil `WebFetch`. Si le site renvoie **403** (fréquent, ex. openjdk.org),
