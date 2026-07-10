@@ -21,7 +21,7 @@ export const CATEGORY_SLUGS: string[] = [
 export const ARTICLE_CATALOG: Record<string, string[]> = {
   automobile: ['freinage-regeneratif'],
   cybersecurity: ['zero-trust-architecture', 'owasp-top-10-2021'],
-  'dev-info': ['microservices-docker-kubernetes', 'java-virtual-threads-jep-444'],
+  'dev-info': ['microservices-docker-kubernetes', 'java-virtual-threads-jep-444', 'java-records-jep-395'],
   'ia-master': ['model-context-protocol-mcp'],
   electronics: ['onduleurs-solaires'],
   fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
