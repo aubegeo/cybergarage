@@ -9,3 +9,9 @@ Catégorie : `cybersecurity`
 - MITRE ATT&CK — https://attack.mitre.org/ `[libre]`
 - OAuth 2.0 (RFC 6749) — https://www.rfc-editor.org/rfc/rfc6749 `[libre]`
 - JSON Web Token / JWT (RFC 7519) — https://www.rfc-editor.org/rfc/rfc7519 `[libre]`
+- NIST Cybersecurity Framework — https://www.nist.gov/cyberframework `[libre]`
+- NIST SP 800-63 (Digital Identity) — https://pages.nist.gov/800-63-3/ `[libre]`
+- OWASP Cheat Sheet Series — https://cheatsheetseries.owasp.org/ `[libre]`
+- PKCE (RFC 7636) — https://www.rfc-editor.org/rfc/rfc7636 `[libre]`
+- TLS 1.3 (RFC 8446) — https://www.rfc-editor.org/rfc/rfc8446 `[libre]`
+- CIS Controls — https://www.cisecurity.org/controls `[libre]`
