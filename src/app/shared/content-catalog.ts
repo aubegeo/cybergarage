@@ -28,6 +28,6 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   mechanical: [],
   pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
   hpc: ['optimisation-gpu'],
-  telecom: ['reseaux-intelligents'],
+  telecom: ['reseaux-intelligents', 'tls-1-3-rfc-8446'],
   simulation: ['simulation-physique'],
 };
