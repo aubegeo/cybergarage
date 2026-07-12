@@ -7,3 +7,4 @@ Catégorie : `mechanical`
 - NASA Technical Standards — https://standards.nasa.gov/ `[libre]`
 - NASA Systems Engineering Handbook — https://www.nasa.gov/reference/systems-engineering-handbook/ `[libre]`
 - NIST — Engineering Laboratory (publications) — https://www.nist.gov/el/publications `[libre]`
+- Techniques de l'Ingénieur (base documentaire ingénierie) — https://www.techniques-ingenieur.fr/ `[payant]`
