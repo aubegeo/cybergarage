@@ -21,3 +21,4 @@ Catégorie : `dev-info`
 - Spring Boot — Reference — https://docs.spring.io/spring-boot/index.html `[libre]`
 - HTTP Semantics (RFC 9110) — https://www.rfc-editor.org/rfc/rfc9110 `[libre]`
 - Git — Documentation officielle — https://git-scm.com/doc `[libre]`
+- Quarkus — nouveaux benchmarks de performance — https://quarkus.io/blog/new-benchmarks/ `[libre]`
