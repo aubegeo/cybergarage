@@ -25,7 +25,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   'ia-master': ['model-context-protocol-mcp'],
   electronics: ['onduleurs-solaires'],
   fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
-  mechanical: [],
+  mechanical: ['nasa-se-engine-ingenierie-systeme'],
   pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
   hpc: ['optimisation-gpu'],
   telecom: ['reseaux-intelligents', 'http-3-quic-rfc-9114'],
