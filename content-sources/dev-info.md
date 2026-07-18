@@ -34,3 +34,7 @@ Catégorie : `dev-info`
 - Java Collections Framework (Oracle) — https://docs.oracle.com/javase/tutorial/collections/index.html `[libre]`
 - Jakarta Bean Validation — Spécification — https://jakarta.ee/specifications/bean-validation/ `[libre]`
 - Hibernate ORM — Documentation officielle — https://hibernate.org/orm/documentation/ `[libre]`
+- mcorbin.fr — ingénierie backend, standardisation & scalabilité (Matthieu Corbin) — https://mcorbin.fr/ `[libre]`
+- System Design — cours (Karan Pratap Singh) — https://www.karanpratapsingh.com/courses/system-design `[libre]`
+- System Design — ByteByteGo (Alex Xu) — https://bytebytego.com/ `[libre]`
+- Webhooks.fyi — standardisation des webhooks — https://webhooks.fyi/ `[libre]`
