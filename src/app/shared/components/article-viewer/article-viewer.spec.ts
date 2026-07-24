@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArticleViewer } from './article-viewer';
+import { ArticleViewerComponent } from './article-viewer';
 
-describe('ArticleViewer', () => {
-  let component: ArticleViewer;
-  let fixture: ComponentFixture<ArticleViewer>;
+describe('ArticleViewerComponent', () => {
+  let component: ArticleViewerComponent;
+  let fixture: ComponentFixture<ArticleViewerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ArticleViewer]
+      imports: [ArticleViewerComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ArticleViewer);
+    fixture = TestBed.createComponent(ArticleViewerComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

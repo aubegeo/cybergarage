@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Sitemap } from './sitemap';
+import { SitemapService } from './sitemap';
 
-describe('Sitemap', () => {
-  let service: Sitemap;
+describe('SitemapService', () => {
+  let service: SitemapService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Sitemap);
+    service = TestBed.inject(SitemapService);
   });
 
   it('should be created', () => {
