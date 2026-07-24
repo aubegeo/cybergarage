@@ -27,7 +27,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
   mechanical: [],
   pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
-  hpc: ['optimisation-gpu'],
+  hpc: ['optimisation-gpu', 'openmp-parallelisme-memoire-partagee'],
   telecom: ['reseaux-intelligents', 'http-3-quic-rfc-9114'],
   simulation: ['simulation-physique'],
 };
