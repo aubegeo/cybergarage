@@ -12,6 +12,15 @@ interface SiteConfig {
   /** Email de contact public. Laisse vide pour ne pas l'afficher (anti-spam). */
   email: string;
   socials: { linkedin: string; github: string };
+  analytics: {
+    /**
+     * Domaine enregistré sur Plausible (ex. 'cybergarage.tech'). Laisse vide
+     * pour désactiver tout analytics — aucun script n'est alors chargé.
+     * Plausible est cookieless : pas de bannière de consentement RGPD requise.
+     * https://plausible.io/
+     */
+    plausibleDomain: string;
+  };
 }
 
 export const SITE: SiteConfig = {
@@ -22,6 +31,9 @@ export const SITE: SiteConfig = {
   socials: {
     linkedin: 'https://www.linkedin.com/in/geoffreyaubert/',
     github: 'https://github.com/aubegeo',
+  },
+  analytics: {
+    plausibleDomain: '', // ex. 'cybergarage.tech' — laissé vide pour l'instant
   },
 };
 
