@@ -8,3 +8,4 @@ Catégorie : `automobile`
 - Réglementations véhicules UNECE (WP.29) — https://unece.org/transport/vehicle-regulations `[libre]`
 - Véhicules électriques (US DOE, AFDC) — https://afdc.energy.gov/vehicles/electric `[libre]`
 - Euro NCAP — https://www.euroncap.com/en `[libre]`
+- IEA — Global EV Outlook — https://www.iea.org/reports/global-ev-outlook-2024 `[libre]`
