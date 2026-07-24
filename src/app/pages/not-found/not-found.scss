@@ -1,0 +1,67 @@
+.not-found-page {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  background: var(--background-primary);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.content {
+  max-width: 480px;
+}
+
+.code {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(135deg, #4ECDC4 0%, #6C5CE7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin: 0.5rem 0 1rem;
+}
+
+.lead {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+
+  .material-icons { font-size: 1.1rem; }
+  &:hover { transform: translateY(-2px); }
+
+  &.btn-primary {
+    background: #4ECDC4;
+    color: white;
+  }
+
+  &.btn-ghost {
+    background: var(--card-background);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+}
