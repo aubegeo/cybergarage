@@ -4,7 +4,7 @@ Catégorie : `electronics`
 
 - Onduleurs solaires — `[fait]`
 - Spécifications USB (USB-IF) — https://www.usb.org/documents `[libre]`
-- Bus I²C — UM10204 (NXP, officiel) — https://www.nxp.com/docs/en/user-guide/UM10204.pdf `[libre]`
+- Bus I²C — UM10204 (NXP, officiel) — https://www.nxp.com/docs/en/user-guide/UM10204.pdf `[lien mort 2026-07-30, 404 sur nxp.com et webapp/Download — semble retiré de la diffusion publique NXP, cf. forum communautaire "Is it still published?"]`
 - Documentation KiCad — https://docs.kicad.org/ `[libre]`
 - Microcontrôleurs STM32 (ST) — https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html `[libre]`
 - Bluetooth — Spécifications — https://www.bluetooth.com/specifications/specs/ `[libre]`
