@@ -19,7 +19,7 @@ export const CATEGORY_SLUGS: string[] = [
 
 /** Catalogue des articles publiés : catégorie -> liste de slugs (fichiers .md). */
 export const ARTICLE_CATALOG: Record<string, string[]> = {
-  automobile: ['freinage-regeneratif'],
+  automobile: ['freinage-regeneratif', 'euro-ncap-notation-etoiles-securite'],
   cybersecurity: ['zero-trust-architecture', 'owasp-top-10-2021'],
   'dev-info': ['microservices-docker-kubernetes', 'java-virtual-threads-jep-444'],
   'ia-master': ['model-context-protocol-mcp'],
