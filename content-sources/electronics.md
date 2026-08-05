@@ -10,4 +10,4 @@ Catégorie : `electronics`
 - Bluetooth — Spécifications — https://www.bluetooth.com/specifications/specs/ `[libre]`
 - IEEE Standards Association — programme IEEE 802 — https://standards.ieee.org/products-programs/get-program/ `[libre]`
 - Arduino — Documentation officielle — https://docs.arduino.cc/ `[libre]`
-- Espressif ESP32 — Documentation officielle (ESP-IDF) — https://docs.espressif.com/projects/esp-idf/en/latest/esp32/ `[libre]`
+- Espressif ESP32 — Documentation officielle (ESP-IDF) — https://docs.espressif.com/projects/esp-idf/en/latest/esp32/ `[fait]`
