@@ -62,7 +62,7 @@ record Range(int min, int max) {
 
 ## Ce que les records ne sont PAS
 
-Un point que le JEP tient à clarifier dans ses *Non-Goals* : ce n'est **pas** une « guerre au boilerplate ». L'objectif n'est pas de raccourcir le code pour le raccourcir, mais d'offrir *« an object-oriented construct that expresses a simple aggregation of values »* et d'aider à **modéliser des données immuables plutôt qu'un comportement extensible**. Les records préservent aussi le typage nominal et la compatibilité de migration de Java.
+Côté *Goals*, le JEP est clair sur l'intention : offrir *« an object-oriented construct that expresses a simple aggregation of values »*, aider à **modéliser des données immuables plutôt qu'un comportement extensible**, et préserver au passage des principes Java de longue date comme le typage nominal et la compatibilité de migration. Côté *Non-Goals*, le JEP tient justement à clarifier que ce n'est **pas** une « guerre au boilerplate » (*« it is not a goal to declare a "war on boilerplate" »*) : la concision n'est qu'une conséquence, pas l'objectif premier.
 
 Autrement dit : si votre classe a une identité, un cycle de vie, du comportement riche ou de l'héritage, ce n'est pas un record. Si c'est un simple agrégat de valeurs immuables (un point, une paire clé/valeur, un DTO, le résultat d'une requête), c'est exactement le bon outil.
 
