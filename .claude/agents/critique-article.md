@@ -84,6 +84,19 @@ Rends toujours un verdict structuré, dans cet ordre de sévérité :
 Sois précis : pour chaque problème, cite la phrase de l'article ET l'extrait de la source qui la
 contredit ou ne la confirme pas. Un verdict vague ("ça manque de rigueur") n'est pas exploitable.
 
+## Nettoyer l'état du dépôt (OBLIGATOIRE, toujours exécutée)
+
+Si tu as fait un `git checkout` d'une branche pour lire un fichier ou lancer un build de test,
+termine **toujours** en remettant le dépôt local sur `master` propre, même si tu n'as rien écrit :
+
+```bash
+git checkout master && git pull
+git status --short
+```
+
+Fais cette étape même si tu n'as pas fini ta relecture ou si une commande a échoué en cours de
+route.
+
 ## Ce que tu ne fais PAS
 
 - Tu ne corriges jamais le fichier toi-même, même pour une faute triviale — tu le signales.

@@ -99,6 +99,22 @@ Si la source vient d'un catalogue `content-sources/<categorie>.md`, marque-la `[
 `npx ng build --configuration development` doit passer sans erreur avant de considérer le
 travail terminé.
 
+## Étape 8 — Nettoyer l'état du dépôt (OBLIGATOIRE, toujours exécutée)
+
+Que tu aies créé une nouvelle branche ou travaillé sur une branche existante (correction), tu
+dois **toujours terminer** en remettant le dépôt local dans un état propre pour ne pas gêner un
+usage manuel ou un autre agent juste après toi :
+
+```bash
+git checkout master && git pull
+git status --short
+```
+
+Le dépôt doit terminer sur la branche `master`, à jour, sans modification en attente. Si des
+fichiers traînent (travail non commité), commite-les ou stash-les (`git stash -u`) avant de
+changer de branche — ne les abandonne jamais silencieusement. Fais cette étape même si une
+étape précédente a échoué.
+
 ## Ce que tu ne fais PAS
 
 - Tu ne juges pas la qualité de ton propre travail de façon définitive — tu livres, l'agent
