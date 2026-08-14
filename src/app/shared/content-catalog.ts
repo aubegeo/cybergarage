@@ -24,7 +24,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   'dev-info': ['microservices-docker-kubernetes', 'java-virtual-threads-jep-444'],
   'ia-master': ['model-context-protocol-mcp'],
   electronics: ['onduleurs-solaires'],
-  fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
+  fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque', 'zephyr-rtos-threads-ordonnancement'],
   mechanical: [],
   pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
   hpc: ['optimisation-gpu'],
