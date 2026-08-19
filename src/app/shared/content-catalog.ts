@@ -23,7 +23,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   cybersecurity: ['zero-trust-architecture', 'owasp-top-10-2021'],
   'dev-info': ['microservices-docker-kubernetes', 'java-virtual-threads-jep-444'],
   'ia-master': ['model-context-protocol-mcp'],
-  electronics: ['onduleurs-solaires'],
+  electronics: ['onduleurs-solaires', 'kicad-drc-design-rules-checker'],
   fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
   mechanical: [],
   pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
