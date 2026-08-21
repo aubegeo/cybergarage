@@ -24,7 +24,7 @@ l'IA (prompt injection, permissions des tools), les coûts et la performance, la
 
 ## Le modèle n'est pas magique, c'est un composant non déterministe
 
-Google documente ses propres pratiques d'ingénierie ML dans un guide interne devenu public,
+Google documente ses propres pratiques d'ingénierie ML dans un guide public,
 *Rules of Machine Learning*, signé Martin Zinkevich. La toute première règle donne le ton :
 *« Don't be afraid to launch a product without machine learning. »* Traduction : si un
 heuristique simple fait 50 % du travail, ne sautez pas directement sur le modèle. La règle 3
