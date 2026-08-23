@@ -38,3 +38,10 @@ Catégorie : `dev-info`
 - System Design — cours (Karan Pratap Singh) — https://www.karanpratapsingh.com/courses/system-design `[libre]`
 - System Design — ByteByteGo (Alex Xu) — https://bytebytego.com/ `[libre]`
 - Webhooks.fyi — standardisation des webhooks — https://webhooks.fyi/ `[libre]`
+- Apache Kafka — fonctionnement interne — https://kafka.apache.org/documentation/ `[libre]`
+- Java — surcharge vs redéfinition (JLS) — https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.4.9 `[libre]`
+- OpenID Connect (SSO) — https://openid.net/specs/openid-connect-core-1_0.html `[libre]`
+- API Composition (patterns microservices) — https://microservices.io/patterns/data/api-composition.html `[libre]`
+- Schema Evolution (Avro) — https://avro.apache.org/docs/ `[libre]`
+- gRPC — Documentation officielle — https://grpc.io/docs/ `[libre]`
+- GraphQL — Learn (spec/officiel) — https://graphql.org/learn/ `[libre]`

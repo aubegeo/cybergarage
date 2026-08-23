@@ -12,3 +12,9 @@ Catégorie : `ia-master`
 - Hugging Face Transformers — Documentation — https://huggingface.co/docs/transformers/index `[libre]`
 - PyTorch — Documentation — https://pytorch.org/docs/stable/index.html `[libre]`
 - scikit-learn — User Guide — https://scikit-learn.org/stable/user_guide.html `[libre]`
+- Google Cloud TPU — Documentation officielle — https://cloud.google.com/tpu/docs `[libre]`
+- Ollama — Documentation officielle — https://ollama.com/docs `[libre]`
+- vLLM — Documentation officielle — https://docs.vllm.ai `[libre]`
+- SGLang — Documentation officielle — https://sgl-project.github.io `[libre]`
+- GraphRAG (Microsoft Research, projet officiel) — https://microsoft.github.io/graphrag/ `[libre]`
+- OWASP Top 10 for LLM Applications — https://genai.owasp.org/ `[libre]`
