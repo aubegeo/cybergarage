@@ -3,7 +3,7 @@
 Catégorie : `simulation`
 
 - Simulation physique — `[fait]`
-- Functional Mock-up Interface (FMI) — https://fmi-standard.org/docs/ `[libre]`
+- Functional Mock-up Interface (FMI) — https://fmi-standard.org/docs/ `[fait]`
 - Documentation OpenFOAM — https://www.openfoam.com/documentation/ `[libre]`
 - Documentation Gmsh (maillage) — https://gmsh.info/doc/texinfo/gmsh.html `[libre]`
 - ParaView — Documentation — https://docs.paraview.org/en/latest/ `[libre]`

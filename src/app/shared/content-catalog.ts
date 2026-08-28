@@ -29,5 +29,5 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   pragmatic: ['genai-et-developpeurs-vers-quel-avenir', 'twelve-factor-app'],
   hpc: ['optimisation-gpu'],
   telecom: ['reseaux-intelligents', 'http-3-quic-rfc-9114'],
-  simulation: ['simulation-physique'],
+  simulation: ['simulation-physique', 'fmi-functional-mock-up-interface'],
 };
