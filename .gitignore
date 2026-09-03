@@ -41,3 +41,8 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Second cerveau — veille technique (état local, pas versionné)
+data/tech_watch_seen.json
+logs/tech_watch*.log
+__pycache__/
