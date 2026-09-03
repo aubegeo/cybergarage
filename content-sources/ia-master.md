@@ -3,6 +3,7 @@
 Catégorie : `ia-master`
 
 - Model Context Protocol (introduction) — `[fait]`
+- Mistral AI — Introducing Agentic Search — https://mistral.ai/news/agentic-search/ `[fait]`
 - MCP — architecture & concepts — https://modelcontextprotocol.io/docs/learn/architecture `[libre]`
 - Anthropic — prompt engineering — https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview `[libre]`
 - Anthropic — tool use (function calling) — https://docs.anthropic.com/en/docs/build-with-claude/tool-use `[libre]`

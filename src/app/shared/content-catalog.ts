@@ -22,7 +22,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
   automobile: ['freinage-regeneratif'],
   cybersecurity: ['zero-trust-architecture', 'owasp-top-10-2021'],
   'dev-info': ['microservices-docker-kubernetes', 'java-virtual-threads-jep-444'],
-  'ia-master': ['model-context-protocol-mcp'],
+  'ia-master': ['model-context-protocol-mcp', 'mistral-agentic-search-vs-rag'],
   electronics: ['onduleurs-solaires'],
   fpga: ['traitement-video-temps-reel', 'lecons-du-dev-embarque'],
   mechanical: [],
