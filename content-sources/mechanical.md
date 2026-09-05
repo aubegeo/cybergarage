@@ -11,3 +11,4 @@ Catégorie : `mechanical`
 - ASM International — bases de données de propriétés matériaux — https://www.asminternational.org/materials-resources/ `[libre]`
 - ESA — Standards d'ingénierie spatiale (ECSS) — https://ecss.nl/ `[libre]`
 - NASA — Structural Design and Test Factors of Safety (NASA-STD-5001) — https://standards.nasa.gov/standard/nasa/nasa-std-5001 `[libre]`
+- ECSS-Q-ST-70-14C (Corrosion) — https://ecss.nl/standard/ecss-q-st-70-14c-corrosion-1-november-2016/ `[fait]` (ecss-corrosion-materiaux-spatiaux)
