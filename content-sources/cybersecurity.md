@@ -8,7 +8,7 @@ Catégorie : `cybersecurity`
 - OWASP ASVS (Application Security Verification Standard) — https://owasp.org/www-project-application-security-verification-standard/ `[libre]`
 - MITRE ATT&CK — https://attack.mitre.org/ `[libre]`
 - OAuth 2.0 (RFC 6749) — https://www.rfc-editor.org/rfc/rfc6749 `[libre]`
-- JSON Web Token / JWT (RFC 7519) — https://www.rfc-editor.org/rfc/rfc7519 `[libre]`
+- JSON Web Token / JWT (RFC 7519) — https://www.rfc-editor.org/rfc/rfc7519 `[fait]` (jwt-json-web-token-rfc-7519)
 - NIST Cybersecurity Framework — https://www.nist.gov/cyberframework `[libre]`
 - NIST SP 800-63 (Digital Identity) — https://pages.nist.gov/800-63-3/ `[libre]`
 - OWASP Cheat Sheet Series — https://cheatsheetseries.owasp.org/ `[libre]`
