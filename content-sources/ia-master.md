@@ -18,3 +18,4 @@ Catégorie : `ia-master`
 - SGLang — Documentation officielle — https://sgl-project.github.io `[libre]`
 - GraphRAG (Microsoft Research, projet officiel) — https://microsoft.github.io/graphrag/ `[libre]`
 - OWASP Top 10 for LLM Applications — https://genai.owasp.org/ `[libre]`
+- Andreescu & Maurin, *Generative AI and the Changing Demand for Skills*, PSE WP 2026-27 (HAL, CC BY 4.0) — https://shs.hal.science/halshs-05742312v1 `[fait]`
