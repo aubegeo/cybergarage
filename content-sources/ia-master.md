@@ -18,3 +18,4 @@ Catégorie : `ia-master`
 - SGLang — Documentation officielle — https://sgl-project.github.io `[libre]`
 - GraphRAG (Microsoft Research, projet officiel) — https://microsoft.github.io/graphrag/ `[libre]`
 - OWASP Top 10 for LLM Applications — https://genai.owasp.org/ `[libre]`
+- Hermes Agent (Nous Research, MIT) — https://github.com/NousResearch/hermes-agent `[fait]`
