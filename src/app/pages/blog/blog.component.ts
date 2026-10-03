@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, inject} from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ArticlesService, ArticleLocal } from '../../shared/services/articles.service';
@@ -11,6 +11,7 @@ import { Category } from '../../shared/models/category';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './blog.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {

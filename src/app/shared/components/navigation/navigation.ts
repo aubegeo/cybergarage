@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, inject} from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -10,6 +10,7 @@ import { Category, NavigationItem } from '../../models/category';
   selector: 'app-navigation',
   imports: [CommonModule, RouterModule],
   templateUrl: './navigation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './navigation.scss',
 })
 export class NavigationComponent implements OnInit {

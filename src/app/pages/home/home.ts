@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, inject} from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -14,6 +14,7 @@ import { Category } from '../../shared/models/category';
   selector: 'app-home',
   imports: [CommonModule, RouterModule, ArticleViewerComponent],
   templateUrl: './home.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.scss',
 })
 export class HomeComponent implements OnInit {

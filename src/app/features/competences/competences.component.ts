@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SeoService } from '../../shared/services/seo';
@@ -33,6 +33,7 @@ interface SoftSkill {
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './competences.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './competences.component.scss'
 })
 export class CompetencesComponent implements OnInit {
