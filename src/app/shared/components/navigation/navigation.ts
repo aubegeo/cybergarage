@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -13,6 +13,7 @@ import { Category, NavigationItem } from '../../models/category';
   styleUrl: './navigation.scss',
 })
 export class NavigationComponent implements OnInit {
+  private readonly cdr = inject(ChangeDetectorRef);
   categories$: Observable<Category[]>;
   navigationItems: NavigationItem[] = [];
   isMobileMenuOpen = false;
@@ -33,6 +34,11 @@ export class NavigationComponent implements OnInit {
     // S'abonner aux changements de thème
     this.themeService.currentTheme$.subscribe(theme => {
       this.isDarkMode = this.themeService.isDarkMode();
+    // markForCheck() est indispensable : l'application tourne SANS zone.js
+    // (Angular 21, aucun polyfill déclaré dans angular.json), donc une
+    // affectation de champ dans un callback asynchrone ne déclenche aucun
+    // rendu. Sans cette ligne la vue reste vide en permanence.
+      this.cdr.markForCheck();
     });
     
     // Initialiser avec la préférence système si nécessaire

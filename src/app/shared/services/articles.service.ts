@@ -190,7 +190,11 @@ export class ArticlesService {
 
   private async loadArticleFromFile(category: string, slug: string): Promise<ArticleLocal | null> {
     try {
-      const filePath = `/assets/articles/${category}/${slug}.md`;
+      // Chemin RELATIF, sans slash initial, pour qu'il se résolve contre le
+      // <base href> de la page. Avec un slash initial la requête partait de la
+      // racine du domaine, ce qui renvoie 404 dès que le site n'est pas servi à
+      // la racine (cas de GitHub Pages, servi sous /cybergarage/).
+      const filePath = `assets/articles/${category}/${slug}.md`;
       const response = await this.http.get(filePath, { responseType: 'text' }).toPromise();
       
       if (response) {
