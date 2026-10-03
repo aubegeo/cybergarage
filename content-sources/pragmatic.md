@@ -16,3 +16,6 @@ Catégorie : `pragmatic`
 - Aphyr (Kyle Kingsbury) — Jepsen, tests de correction distribuée — https://aphyr.com/ `[libre]`
 - Martin Fowler — martinfowler.com (architecture logicielle) — https://martinfowler.com/ `[libre]`
 - Will Larson — Engineering Strategies (lethain.com) — https://lethain.com/eng-strategies/ `[libre]`
+- learn-harness-engineering (cours open source MIT, walkinglabs) — https://github.com/walkinglabs/learn-harness-engineering `[fait]`
+  ⚠ Source secondaire, pas une spécification. Chiffres du cours étiquetés « illustratifs » le
+  2026-09-30 par ses propres auteurs ; ne jamais les reprendre sans cette mention.
