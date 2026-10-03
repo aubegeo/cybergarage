@@ -46,3 +46,19 @@ Thumbs.db
 data/tech_watch_seen.json
 logs/tech_watch*.log
 __pycache__/
+
+# Outillage d'assistance IA — volontairement hors du dépôt public.
+# Retiré de l'index le 2026-10-03, avant le passage du dépôt en public.
+# ⚠ Ces chemins restent visibles dans l'historique git des commits antérieurs :
+#   voir `git log -- .claude/ CLAUDE.md`. Le .gitignore empêche les ajouts
+#   futurs, il ne désindexe pas le passé.
+.claude/
+CLAUDE.md
+AGENTS.md
+.cursor/
+.cursorrules
+.aider*
+.github/copilot-instructions.md
+
+# Configuration launchd propre à la machine locale (contient un chemin absolu)
+scripts/*.plist

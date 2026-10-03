@@ -1,59 +1,86 @@
-# Cybergarage
+# CyberGarage
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4.
+Blog technique d'ingénierie, écrit par **Geoffrey Aubert**, développeur senior Java/Angular.
+Chaque article part d'une **source officielle** (spécification, RFC, JEP, norme, documentation
+éditeur) et s'en tient à ce que cette source affirme réellement.
 
-## Development server
+Onze domaines sont couverts : automobile, développement, IA, cybersécurité, FPGA et embarqué,
+mécanique, électronique, pratiques d'ingénierie, calcul haute performance, télécommunications
+et simulation.
 
-To start a local development server, run:
+## Principe éditorial
 
-```bash
-ng serve
-```
+Un article ne vaut que par sa vérifiabilité. Trois règles s'appliquent sans exception.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Rien n'est affirmé qui ne figure dans la source citée. Quand un chiffre circule sous une forme
+déformée, l'article le rectifie en renvoyant au document d'origine. Et les sources sont listées
+en fin d'article, la plus importante en premier, avec la version ou le statut du document quand
+c'est pertinent.
 
-## Code scaffolding
+## Pile technique
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Élément | Choix |
+|---|---|
+| Framework | Angular 21, composants standalone, aucun NgModule |
+| Rendu | Prérendu statique complet via `@angular/ssr` |
+| Détection de changement | Mode **zoneless**, sans `zone.js` |
+| Interface | Angular Material et CDK |
+| Contenu | Fichiers Markdown avec frontmatter YAML |
+| Rendu Markdown | `marked`, formules avec KaTeX, code avec Prism |
 
-```bash
-ng generate component component-name
-```
+Le site est **entièrement prérendu**, les 32 routes étant générées à la compilation. Un robot
+d'indexation reçoit donc du HTML complet, texte des articles inclus, sans dépendre d'un serveur
+qui tourne.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Démarrer
 
 ```bash
-ng test
+npm install
+npm start          # serveur de développement sur http://localhost:4200
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## Vérifier
 
 ```bash
-ng e2e
+ng build           # build de production, doit sortir en 0
+ng test            # tests unitaires via Vitest
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Pour un build destiné à un sous-chemin, par exemple GitHub Pages :
 
-## Additional Resources
+```bash
+ng build --base-href /cybergarage/
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Ajouter un article
+
+Le contenu est de la donnée, pas du code.
+
+1. Déposer le fichier dans `src/assets/articles/<catégorie>/<slug>.md`, avec le frontmatter
+   attendu : `title`, `category`, `date`, `author`, `tags`, `summary`, `readTime`.
+2. Enregistrer le slug dans `ARTICLE_CATALOG` de
+   [`src/app/shared/content-catalog.ts`](src/app/shared/content-catalog.ts).
+
+Ce catalogue est la source unique : il alimente l'affichage, le sitemap et la liste des routes
+à prérendre. Un article absent du catalogue n'est ni rendu ni référencé.
+
+## Structure
+
+```
+src/
+├── app/
+│   ├── pages/            écrans (accueil, blog, article, pages vitrine)
+│   ├── features/         pages de catégorie
+│   ├── shared/
+│   │   ├── content-catalog.ts    source unique des articles publiés
+│   │   └── services/             chargement des articles, SEO, sitemap
+│   ├── app.routes.ts             routage applicatif
+│   └── app.routes.server.ts      mode de rendu par route (tout en prérendu)
+├── assets/articles/      les articles, un dossier par catégorie
+└── content-sources/      catalogue des sources officielles par catégorie
+```
+
+## Licence
+
+[MIT](LICENSE). Le code est réutilisable librement. Les articles restent la propriété de leur
+auteur.
