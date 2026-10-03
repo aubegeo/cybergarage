@@ -1,0 +1,107 @@
+name: Deploy to GitHub Pages
+
+# Un push sur master publie. Les pull requests ne font que construire, sans
+# deployer, pour attraper une regression avant la fusion.
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+# Requis par actions/deploy-pages : pages pour publier, id-token pour l'attestation.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul deploiement a la fois. On ne coupe pas celui en cours, pour ne pas
+# laisser le site dans un etat partiel.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # Node 22 satisfait a la fois Angular 21 (^22.12.0) et Angular 22 (^22.22.3),
+  # donc cette valeur reste valable apres la montee de version.
+  NODE_VERSION: '22'
+  # Site de projet servi sous /<repo>/, et non a la racine du domaine. Le base
+  # href doit correspondre, sinon les assets sont demandes depuis la racine et
+  # renvoient 404.
+  BASE_HREF: /cybergarage/
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Installer les dependances
+        run: npm ci
+
+      - name: Tests unitaires
+        run: npx ng test
+
+      - name: Build prerendu
+        run: npx ng build --base-href "$BASE_HREF"
+
+      - name: Verifier que le prerendu contient bien le texte des articles
+        # Garde-fou : le rendu Markdown cote serveur depend de
+        # assetsFromDiskInterceptor et de l'absence de garde navigateur dans
+        # ArticlesService. Si l'un des deux casse, le build reste vert mais les
+        # pages ne contiennent plus que la navigation. Ce controle echoue alors,
+        # au lieu de publier un site vide pour les robots d'indexation.
+        run: |
+          python3 - <<'CHK'
+          import re, glob, sys
+          pages = sorted(glob.glob('dist/cybergarage/browser/article/*/*/index.html'))
+          if len(pages) < 10:
+              sys.exit(f'Echec : {len(pages)} page(s) d article prerendue(s), au moins 10 attendues.')
+          maigres = []
+          for f in pages:
+              html = open(f, encoding='utf-8').read()
+              texte = re.sub(r'<[^>]+>', ' ', re.sub(r'<(script|style).*?</\1>', '', html, flags=re.S))
+              mots = len(re.sub(r'\s+', ' ', texte).split())
+              if mots < 400:
+                  maigres.append((mots, f))
+          if maigres:
+              for m, f in maigres:
+                  print(f'  {m} mots seulement : {f}')
+              sys.exit(f'Echec : {len(maigres)} page(s) sans le texte de l article.')
+          print(f'{len(pages)} pages d article prerendues, toutes avec leur texte.')
+          CHK
+
+      - name: Repli 404 et desactivation de Jekyll
+        run: |
+          # Pages ne connait pas le routage Angular : il sert 404.html pour toute
+          # URL inconnue, et le routeur reprend la main cote navigateur.
+          cp dist/cybergarage/browser/index.html dist/cybergarage/browser/404.html
+          # Sans ce fichier, Pages applique Jekyll et ignore tout chemin commencant
+          # par un underscore.
+          touch dist/cybergarage/browser/.nojekyll
+
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist/cybergarage/browser
+
+  deploy:
+    name: Deploy
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
