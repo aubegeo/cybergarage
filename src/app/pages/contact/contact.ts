@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SeoService } from '../../shared/services/seo';
@@ -15,6 +15,7 @@ interface Opportunity {
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './contact.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact.scss',
 })
 export class ContactComponent implements OnInit {

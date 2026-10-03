@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './not-found.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './not-found.scss',
 })
 export class NotFoundComponent implements OnInit {
