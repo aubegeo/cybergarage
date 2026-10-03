@@ -1,11 +1,28 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
+import { ARTICLE_CATALOG } from './shared/content-catalog';
 
+/**
+ * Déploiement GitHub Pages : tout doit être prérendu.
+ *
+ * Pages ne sert que des fichiers statiques et n'exécute aucun serveur Node, donc
+ * RenderMode.Server y produirait une page vide. Le site est désormais entièrement
+ * généré à la compilation.
+ *
+ * C'est aussi meilleur pour le référencement et pour la citation par les modèles,
+ * puisqu'un robot reçoit du HTML complet sans dépendre d'un serveur qui tourne.
+ */
 export const serverRoutes: ServerRoute[] = [
   {
-    // Route dynamique : rendu serveur à la demande (pas de prérendu car les
-    // paramètres :category/:id ne sont pas connus à la compilation).
+    // Les slugs SONT énumérables, ils vivent dans ARTICLE_CATALOG, que le
+    // générateur de sitemap lit déjà. L'ancien commentaire affirmait le
+    // contraire et empêchait le prérendu de toutes les pages d'article.
     path: 'article/:category/:id',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Prerender,
+    async getPrerenderParams() {
+      return Object.entries(ARTICLE_CATALOG).flatMap(([category, slugs]) =>
+        slugs.map(id => ({ category, id })),
+      );
+    },
   },
   // Chemins statiques réels de l'app (voir app.routes.ts), tous prérendus.
   { path: '', renderMode: RenderMode.Prerender },
@@ -26,9 +43,11 @@ export const serverRoutes: ServerRoute[] = [
   { path: 'telecom', renderMode: RenderMode.Prerender },
   { path: 'simulation', renderMode: RenderMode.Prerender },
   {
-    // Tout le reste (URL inconnue) : rendu à la demande de la page 404,
-    // impossible à prérendre puisque les chemins ne sont pas énumérables.
+    // Angular exige que toute route de app.routes.ts soit couverte ici, y compris
+    // l'attrape-tout. Sur un hébergement statique il est rendu côté client : le
+    // workflow Pages recopie la page prérendue en 404.html, Pages la sert pour
+    // toute URL inconnue, et le routeur Angular reprend la main dans le navigateur.
     path: '**',
-    renderMode: RenderMode.Server
-  }
+    renderMode: RenderMode.Client,
+  },
 ];
