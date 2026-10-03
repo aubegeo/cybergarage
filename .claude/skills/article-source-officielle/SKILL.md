@@ -53,6 +53,57 @@ Lire attentivement, repérer les formulations officielles importantes (à citer 
   avec le statut/version quand c'est pertinent (ex. « JEP 444, statut Closed/Delivered, JDK 21 »).
   Mettre aussi des **liens inline** vers la source aux endroits clés du texte.
 
+## Étape 2 bis — Marqueurs d'IA à éviter (règle de Geoffrey, 2026-09-29)
+
+Les articles paraissent sous le nom de Geoffrey Aubert. Il repère les marqueurs qui
+trahissent une génération automatique et ils lui coûtent en crédibilité, donc cette
+étape n'est pas cosmétique.
+
+**Le tiret long `—` : zéro, sans exception.** Le remplacer par un point, une virgule,
+une parenthèse, ou en restructurant la phrase. Y compris dans le `summary` du
+frontmatter et dans les intertitres.
+
+**Le deux-points d'apposition, à distinguer du deux-points d'énumération.**
+À éviter, celui qui met une glose en valeur pour l'effet, du type « La correction
+était évidente : un identifiant par projet. » Légitime en revanche quand une vraie
+énumération suit, du type « J'en retiens trois choses : ». Le test, est-ce qu'une
+liste ou une série suit réellement ? Si oui il est à sa place, si c'est une
+reformulation destinée à frapper, c'est le tic. Le deux-points du **titre** au format
+maison (« X : ce que dit vraiment Y ») est accepté.
+
+**La virgule devant « et ».** En français elle n'a pas lieu d'être, contrairement à
+l'anglais. La supprimer quand la phrase le permet, sinon subordonner. Ne PAS corriger
+en coupant en phrases courtes, voir le point suivant.
+
+**Pas de phrases courtes à effet, pas d'intertitres nominaux.** Le rythme staccato du
+type « C'était raisonnable. » « Le contexte. » est une signature d'IA autant que de
+post LinkedIn générique. Écrire en paragraphes suivis, avec des transitions
+explicites. Les conjonctions de subordination (« de sorte que », « sauf que »,
+« puisque », « car ») font le travail que les fragments faisaient, en mieux, parce
+qu'elles explicitent la causalité.
+
+**Typographie française.** Un mot interrogatif appelle un point d'interrogation
+(« Comment je l'ai trouvé ? » et non « … trouvé. »). Espace insécable avant `?`, `!`,
+`;` et `:`. Chevrons `« »` avec espace intérieure, jamais de guillemets droits.
+
+**Contrôle avant de commiter**, à lancer depuis la racine du dépôt :
+
+```bash
+python3 - <<'CHK'
+import re,sys,pathlib
+f=sys.argv[1] if len(sys.argv)>1 else input('chemin du .md : ')
+raw=pathlib.Path(f).read_text(encoding='utf-8')
+body=re.sub(r'```.*?```','',raw.split('---',2)[2],flags=re.S)
+print('tirets longs   :',body.count('—'),'(doit valoir 0)')
+print('virgules « , et »:',len(re.findall(r', et\b',body)),'(doit valoir 0)')
+for m in re.finditer(r'[a-zéèêàç]\s*:\s+[a-zéèêà]',body):
+    print('  deux-points a verifier :',body[max(0,m.start()-70):m.end()+40].replace(chr(10),' '))
+CHK
+```
+
+La règle complète, avec ses exemples de bascule réussie, est dans la mémoire
+`feedback_marqueurs_ia_redaction`.
+
 ## Étape 3 — Choisir la catégorie (automatique)
 Même mapping que le skill `youtube-to-article` (le domaine prime sur l'angle) :
 `automobile`, `dev-info` (Artisan Développeur), `ia-master`, `cybersecurity`,
@@ -92,3 +143,5 @@ rappeler à l'utilisateur de relire, et lister les sources officielles utilisée
 - **Vérifiabilité avant tout** : ne jamais présenter comme officiel un fait absent de la source.
 - Citer **la source primaire** (l'éditeur), pas un intermédiaire.
 - Si la source est payante/inaccessible, le dire et proposer une alternative officielle.
+- **Relire en cherchant activement les marqueurs d'IA** (étape 2 bis) avant de commiter :
+  les `—`, les `:` d'apposition, les « , et », les phrases de moins de cinq mots.
