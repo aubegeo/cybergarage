@@ -27,8 +27,11 @@ export const routes: Routes = [
   },
   {
     path: 'article/:category/:id',
-    loadComponent: () => import('./shared/components/article-viewer/article-viewer').then(m => m.ArticleViewerComponent),
-    data: { renderMode: 'ssr' }
+    // ArticleViewerComponent est purement presentationnel (@Input article), il ne
+    // peut pas servir de composant de route : rien ne remplissait son input, donc
+    // toute page d'article affichait « Aucun article selectionne ».
+    loadComponent: () => import('./pages/article/article-page').then(m => m.ArticlePageComponent),
+    data: { renderMode: 'prerender' }
   },
   {
     path: 'automobile',

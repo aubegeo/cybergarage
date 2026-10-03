@@ -32,7 +32,10 @@ export class ArticleViewerComponent implements OnInit, OnChanges, AfterViewInit,
   ) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['article'] && this.article && isPlatformBrowser(this.platformId)) {
+    // Volontairement SANS garde navigateur : le Markdown doit etre converti au
+    // prerendu aussi, sinon la page generee ne contient que les metadonnees et un
+    // robot d'indexation ne voit jamais le texte de l'article.
+    if (changes['article'] && this.article) {
       this.renderArticle();
     }
   }
@@ -111,7 +114,16 @@ export class ArticleViewerComponent implements OnInit, OnChanges, AfterViewInit,
       content = this.processLatex(content);
       
       this.renderedContent = content;
-      
+
+      // La coloration syntaxique et le rendu des formules manipulent le DOM, donc
+      // uniquement dans le navigateur. Au prerendu on s'arrete apres la
+      // conversion Markdown, ce qui suffit a produire le texte complet.
+      if (!isPlatformBrowser(this.platformId)) {
+        this.isLoading = false;
+        this.cdr.markForCheck();
+        return;
+      }
+
       // Utiliser setTimeout pour s'assurer que la vue est mise à jour
       setTimeout(() => {
         this.highlightCode();

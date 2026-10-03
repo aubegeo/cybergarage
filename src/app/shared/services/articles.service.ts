@@ -166,9 +166,12 @@ export class ArticlesService {
   }
 
   private async loadArticles(): Promise<void> {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
+    // La garde « navigateur uniquement » a ete retiree volontairement. Elle
+    // empechait le prerendu de charger le moindre article, de sorte que chaque
+    // page generee ne contenait que la coquille, sans texte, ce qui annule
+    // l'interet du prerendu pour le referencement. Cote serveur les requetes
+    // vers assets/** sont desormais servies depuis le disque par
+    // assetsFromDiskInterceptor.
 
     const articles: ArticleLocal[] = [];
     
