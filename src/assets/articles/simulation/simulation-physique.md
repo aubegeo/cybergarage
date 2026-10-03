@@ -12,7 +12,7 @@ readTime: 20
 
 ## Introduction
 
-La simulation physique moderne combine algorithmes numériques avancés et puissance de calcul GPU pour créer des environnements virtuels photoréalistes en temps réel. Ce guide explore les techniques de pointe pour la simulation de corps rigides, fluides, et le rendu basé sur la physique.
+La simulation physique moderne combine algorithmes numériques avancés et puissance de calcul GPU pour créer des environnements virtuels photoréalistes en temps réel. Ce guide explore les techniques de pointe pour la simulation de corps rigides et de fluides ainsi que le rendu basé sur la physique.
 
 ## Architecture du moteur de simulation
 
@@ -1250,7 +1250,7 @@ private:
 
 La simulation physique avancée et le rendu photoréaliste représentent l'aboutissement de décennies de recherche en informatique graphique. L'intégration harmonieuse d'algorithmes de simulation haute performance, de techniques de ray tracing modernes et de systèmes d'optimisation adaptatifs permet de créer des expériences visuelles et interactives d'un réalisme saisissant.
 
-Les futures évolutions incluront l'intelligence artificielle pour la prédiction de comportements physiques complexes, l'optimisation neuromorphique des algorithmes de simulation, et l'exploitation des architectures GPU de nouvelle génération pour repousser encore les limites du temps réel.
+Les futures évolutions incluront l'intelligence artificielle pour la prédiction de comportements physiques complexes, l'optimisation neuromorphique des algorithmes de simulation et l'exploitation des architectures GPU de nouvelle génération pour repousser encore les limites du temps réel.
 
 ---
 
