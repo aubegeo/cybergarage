@@ -4,7 +4,7 @@ Catégorie : `dev-info`
 
 - Microservices Docker/Kubernetes — `[fait]`
 - Java Virtual Threads (JEP 444) — `[fait]`
-- Java Records (JEP 395) — https://openjdk.org/jeps/395 `[libre]`
+- Java Records (JEP 395) — https://openjdk.org/jeps/395 `[fait]`
 - Pattern Matching for switch (JEP 441) — https://openjdk.org/jeps/441 `[libre]`
 - Sealed Classes (JEP 409) — https://openjdk.org/jeps/409 `[libre]`
 - Structured Concurrency (JEP 505) — https://openjdk.org/jeps/505 `[libre]`
