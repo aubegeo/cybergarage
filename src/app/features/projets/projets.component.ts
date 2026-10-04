@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SeoService } from '../../shared/services/seo';
@@ -18,6 +18,7 @@ interface Project {
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './projets.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './projets.component.scss'
 })
 export class ProjetsComponent implements OnInit {

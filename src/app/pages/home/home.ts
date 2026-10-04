@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -14,9 +14,11 @@ import { Category } from '../../shared/models/category';
   selector: 'app-home',
   imports: [CommonModule, RouterModule, ArticleViewerComponent],
   templateUrl: './home.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.scss',
 })
 export class HomeComponent implements OnInit {
+  private readonly cdr = inject(ChangeDetectorRef);
   featuredArticles$: Observable<Article[]>;
   categories$: Observable<Category[]>;
   latestArticles$: Observable<Article[]>;
@@ -63,6 +65,11 @@ export class HomeComponent implements OnInit {
       if (articles.length > 0) {
         this.selectedArticle = articles[0];
       }
+    // markForCheck() est indispensable : l'application tourne SANS zone.js
+    // (Angular 21, aucun polyfill déclaré dans angular.json), donc une
+    // affectation de champ dans un callback asynchrone ne déclenche aucun
+    // rendu. Sans cette ligne la vue reste vide en permanence.
+      this.cdr.markForCheck();
     });
   }
 

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './shared/components/navigation/navigation';
 import { Footer } from './core/layout/footer/footer';
@@ -8,6 +8,7 @@ import { AnalyticsService } from './shared/services/analytics.service';
   selector: 'app-root',
   imports: [RouterOutlet, NavigationComponent, Footer],
   templateUrl: './app.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.scss'
 })
 export class App {

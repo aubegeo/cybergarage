@@ -860,9 +860,9 @@ BENCHMARK_MAIN();
 
 ## Conclusion
 
-L'optimisation efficace des applications HPC sur GPU nécessite une approche holistique intégrant la gestion mémoire, les algorithmes parallèles, l'auto-tuning, et le profilage. La maîtrise de ces techniques permet d'atteindre des performances proches du pic théorique des architectures modernes.
+L'optimisation efficace des applications HPC sur GPU nécessite une approche holistique intégrant la gestion mémoire, les algorithmes parallèles, l'auto-tuning et le profilage. La maîtrise de ces techniques permet d'atteindre des performances proches du pic théorique des architectures modernes.
 
-Les tendances futures incluent l'exploitation des GPU multi-instances (MIG), l'optimisation pour les architectures exascale, et l'intégration de techniques d'intelligence artificielle pour l'auto-optimisation des codes de calcul scientifique.
+Les tendances futures incluent l'exploitation des GPU multi-instances (MIG), l'optimisation pour les architectures exascale et l'intégration de techniques d'intelligence artificielle pour l'auto-optimisation des codes de calcul scientifique.
 
 ---
 
