@@ -4,17 +4,17 @@ category: dev-info
 date: 2026-07-10
 author: Geoffrey Aubert
 tags: ["java", "records", "immutabilité", "jep-395", "poo"]
-summary: "Finalisés dans Java 16 (JEP 395), les records offrent une syntaxe concise pour déclarer des classes-porteurs de données immuables. Ce qu'ils génèrent, leurs contraintes, et ce qu'ils ne cherchent PAS à être — d'après la source officielle."
+summary: "Finalisés dans Java 16 (JEP 395), les records offrent une syntaxe concise pour déclarer des classes-porteurs de données immuables. Cet article détaille ce qu'ils génèrent, leurs contraintes et ce qu'ils ne cherchent PAS à être, d'après la source officielle."
 readTime: 6
 ---
 
 # Java Records : des porteurs de données transparents et immuables
 
-Combien de fois avez-vous écrit une classe Java « bête » — quelques champs, un constructeur, des getters, `equals()`, `hashCode()`, `toString()` — juste pour transporter de la donnée ? Les **records**, finalisés dans **Java 16** par le [JEP 395](https://openjdk.org/jeps/395), répondent à ce besoin avec une syntaxe minimale.
+Combien de fois avez-vous écrit une classe Java « bête » (quelques champs, un constructeur, des getters, `equals()`, `hashCode()`, `toString()`) juste pour transporter de la donnée ? Les **records**, finalisés dans **Java 16** par le [JEP 395](https://openjdk.org/jeps/395), répondent à ce besoin avec une syntaxe minimale.
 
 ## Définition officielle
 
-Le JEP les définit comme *« classes that act as transparent carriers for immutable data »* — des porteurs transparents de données immuables, que l'on peut voir comme des *« nominal tuples »* (tuples nommés).
+Le JEP les définit comme *« classes that act as transparent carriers for immutable data »*, soit des porteurs transparents de données immuables, que l'on peut voir comme des *« nominal tuples »* (tuples nommés).
 
 L'exemple canonique du JEP tient sur une ligne :
 
@@ -43,7 +43,7 @@ Un record n'est pas un `POJO` déguisé. Le JEP impose des règles qui **font se
 - ses champs dérivés des composants sont **`final`** ;
 - elle a pour superclasse implicite `Record`.
 
-Le JEP explique pourquoi : ces restrictions soulignent que *« the API of a record class is defined solely by its state description, and cannot be enhanced later by another class »*. L'état, c'est l'API — rien de plus.
+Le JEP en donne la raison, puisque ces restrictions soulignent que *« the API of a record class is defined solely by its state description, and cannot be enhanced later by another class »*, de sorte que l'état constitue l'API et rien de plus.
 
 ## Le constructeur compact
 
@@ -58,17 +58,17 @@ record Range(int min, int max) {
 }
 ```
 
-À noter, une garantie apportée par le JEP : il est devenu une **erreur de compilation** d'affecter un champ d'instance dans le corps du constructeur — ce qui renforce l'usage prévu (valider, pas muter).
+Le JEP apporte une garantie à noter, puisqu'il est devenu une **erreur de compilation** d'affecter un champ d'instance dans le corps du constructeur, ce qui renforce l'usage prévu (valider, pas muter).
 
 ## Ce que les records ne sont PAS
 
-Côté *Goals*, le JEP est clair sur l'intention : offrir *« an object-oriented construct that expresses a simple aggregation of values »*, aider à **modéliser des données immuables plutôt qu'un comportement extensible**, et préserver au passage des principes Java de longue date comme le typage nominal et la compatibilité de migration. Côté *Non-Goals*, le JEP tient justement à clarifier que ce n'est **pas** une « guerre au boilerplate » (*« it is not a goal to declare a "war on boilerplate" »*) : la concision n'est qu'une conséquence, pas l'objectif premier.
+Côté *Goals*, le JEP est clair sur l'intention : offrir *« an object-oriented construct that expresses a simple aggregation of values »*, aider à **modéliser des données immuables plutôt qu'un comportement extensible** et préserver au passage des principes Java de longue date comme le typage nominal et la compatibilité de migration. Côté *Non-Goals*, le JEP tient justement à clarifier que ce n'est **pas** une « guerre au boilerplate » (*« it is not a goal to declare a “war on boilerplate” »*), la concision n'étant qu'une conséquence et non l'objectif premier.
 
-Autrement dit : si votre classe a une identité, un cycle de vie, du comportement riche ou de l'héritage, ce n'est pas un record. Si c'est un simple agrégat de valeurs immuables (un point, une paire clé/valeur, un DTO, le résultat d'une requête), c'est exactement le bon outil.
+Autrement dit, si votre classe a une identité, un cycle de vie, du comportement riche ou de l'héritage, ce n'est pas un record. Si c'est un simple agrégat de valeurs immuables (un point, une paire clé/valeur, un DTO, le résultat d'une requête), c'est exactement le bon outil.
 
 ## En pratique
 
 Les records brillent particulièrement pour les DTO, les objets de valeur (*value objects*) du DDD, les clés composites, ou les résultats intermédiaires d'un `Stream`. Et ils s'intègrent avec le *pattern matching* (JEP 440, *record patterns*), ce qui ouvre un style de programmation par déstructuration très expressif.
 
 ## Sources
-- **Source officielle** : JEP 395 « Records », statut *Closed/Delivered*, finalisé dans JDK 16 — https://openjdk.org/jeps/395
+- **Source officielle** : JEP 395 « Records », statut *Closed/Delivered*, finalisé dans JDK 16, https://openjdk.org/jeps/395

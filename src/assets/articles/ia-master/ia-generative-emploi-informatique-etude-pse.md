@@ -4,7 +4,7 @@ category: ia-master
 date: 2026-09-29
 author: Geoffrey Aubert
 tags: ["ia-generative", "emploi", "marche-du-travail", "etude", "france-travail"]
-summary: "Un chiffre circule depuis septembre 2026, les offres d'emploi informatique auraient chuté de plus de 50 % à cause de l'IA générative. Le working paper d'où il vient ne dit pas cela. Lecture à la source."
+summary: "Un chiffre circule depuis septembre 2026 selon lequel les offres d'emploi informatique auraient chuté de plus de 50 % à cause de l'IA générative, alors que le working paper d'où il vient ne dit pas cela, comme le montre cette lecture à la source."
 readTime: 6
 ---
 
@@ -46,35 +46,35 @@ Le chiffre existe bien dans l'étude, mais il mesure tout autre chose. Il désig
 
 En comparant début 2025 à la période d'avant l'IA générative, les auteurs relèvent « an increase of about 50% in the number of applicants per job opening for IT-specialist jobs and 10% increase for IT-exposed jobs ».
 
-La mécanique est double. Les offres diminuent tandis que le nombre de candidats augmente, parce que les exigences en programmation baissent et ouvrent ces postes à un vivier plus large. Le rapport candidats par poste se dégrade donc des deux côtés à la fois.
+La mécanique est double, les offres diminuant tandis que le nombre de candidats augmente, parce que les exigences en programmation baissent et ouvrent ces postes à un vivier plus large. Le rapport candidats par poste se dégrade donc des deux côtés à la fois.
 
-Confondre les deux revient à transformer « il y a une fois et demie plus de candidats par poste » en « il y a deux fois moins de postes ». Les deux décrivent un marché tendu, mais ce ne sont pas les mêmes faits, et seul le second justifierait les titres alarmistes.
+Confondre les deux revient à transformer « il y a une fois et demie plus de candidats par poste » en « il y a deux fois moins de postes ». Les deux décrivent un marché tendu, mais ce ne sont pas les mêmes faits, puisque seul le second justifierait les titres alarmistes.
 
 ## Ce qui ne bouge pas, le plus intéressant
 
-Les salaires proposés. Pour les métiers *IT-exposed*, ils sont restés « completely stable throughout the period under consideration ». Pour les *IT-specialist*, stables jusqu'à fin 2023, puis en léger recul.
+Il s'agit des salaires proposés, qui sont restés « completely stable throughout the period under consideration » pour les métiers *IT-exposed*, tandis qu'ils sont stables jusqu'à fin 2023 puis en léger recul pour les *IT-specialist*.
 
 Cette stabilité est ce qui donne son sens à l'article. Si la part des offres informatiques baisse sans que les salaires relatifs augmentent, on ne peut pas expliquer le phénomène par un renchérissement de ces profils. Les auteurs y voient la signature d'un changement technique qui rend les compétences informatiques « less and less critical ».
 
 ## Le déplacement des compétences demandées
 
-Autre résultat qui mérite mieux qu'un titre. Parmi les offres pour métiers *IT-specialist*, la proportion exigeant des compétences de programmation précises diminue nettement, et ce recul est compensé par une hausse des offres réclamant des compétences en prise de parole.
+Un autre résultat mérite mieux qu'un titre, à savoir que, parmi les offres pour métiers *IT-specialist*, la proportion exigeant des compétences de programmation précises diminue nettement, ce recul étant compensé par une hausse des offres réclamant des compétences en prise de parole.
 
-Quant aux compétences en IA elles-mêmes, leur présence dans les offres reste « very small (less than 1%) », y compris chez les *IT-specialist*, et l'augmentation se concentre sur quelques métiers. Les développeurs logiciels représentent à eux seuls environ 69 % de cette hausse, les consultants fonctionnels 14 %. Il n'y a pas de diffusion générale de la demande de compétences IA.
+Quant aux compétences en IA elles-mêmes, leur présence dans les offres reste « very small (less than 1%) », y compris chez les *IT-specialist*, l'augmentation se concentrant sur quelques métiers. Les développeurs logiciels représentent à eux seuls environ 69 % de cette hausse, les consultants fonctionnels 14 %. Il n'y a pas de diffusion générale de la demande de compétences IA.
 
 ## Ce que les auteurs ne prétendent pas
 
-Le papier signale lui-même ses limites. Les reprendre fait partie d'une lecture honnête.
+Puisque le papier signale lui-même ses limites, les reprendre fait partie d'une lecture honnête.
 
 Les auteurs ne peuvent pas exclure que les offres qui disparaissent après 2022 soient précisément celles qui peinaient le plus à trouver des candidats qualifiés. Ils ne peuvent pas exclure non plus que leur groupe de contrôle ait été touché par d'autres gains d'efficacité liés à l'IA, notamment sur les tâches de rédaction. Enfin, la base France Travail ne couvre pas la période antérieure aux années 2020, d'où le recours aux données du ministère du Travail pour les tendances longues.
 
-À leur décharge, les tests de robustesse sont nombreux. Groupe de contrôle alternatif issu de la littérature par tâches, contrôle des compétences rédactionnelles, contrôle de la composition sectorielle et vérification que la rupture de tendance n'est pas un simple retour à la situation d'avant 2020.
+À leur décharge, les tests de robustesse sont nombreux, puisqu'ils comprennent un groupe de contrôle alternatif issu de la littérature par tâches, un contrôle des compétences rédactionnelles, un contrôle de la composition sectorielle et une vérification que la rupture de tendance n'est pas un simple retour à la situation d'avant 2020.
 
 ## Ce qu'il faut en retenir
 
 L'étude documente une contraction réelle et mesurée du marché de l'emploi informatique en France depuis fin 2023, avec des baisses d'offres de l'ordre de 20 à 40 % selon le périmètre, une pression accrue sur chaque poste et un glissement des compétences attendues vers la communication.
 
-C'est déjà un constat sérieux. Il n'avait pas besoin d'être arrondi à la moitié pour mériter d'être lu.
+C'est déjà un constat sérieux, qui n'avait pas besoin d'être arrondi à la moitié pour mériter d'être lu.
 
 Le papier est en accès libre sous licence CC BY 4.0. Quand un chiffre vous arrive par un article ou une vidéo, la source primaire est souvent à un clic.
 
