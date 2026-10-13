@@ -7,7 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:cybergarage": "node dist/cybergarage/server/server.mjs"
+    "serve:ssr:cybergarage": "node dist/cybergarage/server/server.mjs",
+    "catalog": "node tools/generate-content-catalog.mjs",
+    "catalog:check": "node tools/generate-content-catalog.mjs --check",
+    "prebuild": "npm run catalog",
+    "prestart": "npm run catalog"
   },
   "prettier": {
     "printWidth": 100,
