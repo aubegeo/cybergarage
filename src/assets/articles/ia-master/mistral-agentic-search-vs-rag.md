@@ -19,7 +19,7 @@ C'est le problème que résout le **RAG** (Retrieval-Augmented Generation). Et c
 Le principe du RAG est simple : au lieu de laisser le LLM répondre uniquement à partir de ce qu'il connaît déjà, on va d'abord rechercher des informations pertinentes dans nos propres documents, puis les lui fournir pour qu'il construise sa réponse.
 
 ```
-Question utilisateur
+Question utilisateur 
         ↓
 Recherche dans les documents
         ↓
