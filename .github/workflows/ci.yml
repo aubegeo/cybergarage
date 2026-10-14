@@ -14,7 +14,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          # Angular 22 exige ^22.22.3 || ^24.15.0 || >=26.0.0. Ce workflow etait
+          # reste sur Node 20 apres la montee 21 -> 22, et echouait donc avec
+          # « The Angular CLI requires a minimum Node.js version » (code 3).
+          # deploy-pages.yml etait deja sur 22, seul le CI avait ete oublie.
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
