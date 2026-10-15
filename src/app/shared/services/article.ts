@@ -89,14 +89,24 @@ export class ArticleService {
     return typeof result === 'string' ? result : '';
   }
 
+  /**
+   * Articles mis en avant sur la page d'accueil.
+   *
+   * Hérités du squelette initial, ils portaient des slugs de démonstration qui
+   * n'ont jamais existé. Constaté le 2026-10-15, une fois le site publié sur
+   * GitHub Pages : les trois liens « à la une » de l'accueil renvoyaient 404.
+   *
+   * Les slugs, titres et résumés pointent désormais vers de VRAIS articles de
+   * src/assets/articles/. À terme l'accueil devrait lire ArticlesService, qui
+   * dérive tout du catalogue généré, au lieu de cette liste tenue à la main.
+   */
   private loadSampleArticles(): void {
-    // Articles d'exemple pour chaque catégorie
     const sampleArticles: Article[] = [
       {
         id: '1',
-        title: 'Les véhicules électriques et l\'avenir de l\'automobile',
-        slug: 'vehicules-electriques-avenir-automobile',
-        summary: 'Exploration des technologies émergentes dans l\'industrie automobile électrique.',
+        title: 'BEV, PHEV, HEV : ce que "voiture électrique" cache vraiment',
+        slug: 'bev-phev-hev-differences-vehicules-electriques',
+        summary: 'Le DOE distingue trois familles de véhicules électriques que le langage courant confond.',
         content: this.getSampleMarkdownContent('automobile'),
         author: 'CyberGarage Team',
         publishedDate: new Date('2024-12-01'),
@@ -113,9 +123,9 @@ export class ArticleService {
       },
       {
         id: '2',
-        title: 'Architecture Microservices : Guide Complet',
-        slug: 'architecture-microservices-guide-complet',
-        summary: 'Tout ce qu\'il faut savoir sur l\'architecture microservices, style ByteByteGo.',
+        title: 'Microservices avec Docker et Kubernetes : Guide pratique',
+        slug: 'microservices-docker-kubernetes',
+        summary: 'Architecture et déploiement d\'applications microservices avec Docker et Kubernetes.',
         content: this.getSampleMarkdownContent('dev-info'),
         author: 'CyberGarage Team',
         publishedDate: new Date('2024-11-28'),
@@ -132,9 +142,9 @@ export class ArticleService {
       },
       {
         id: '3',
-        title: 'Sécurité Zero Trust : Concepts et Implémentation',
-        slug: 'securite-zero-trust-concepts-implementation',
-        summary: 'Comprendre et implémenter une architecture de sécurité Zero Trust.',
+        title: 'Architecture Zero Trust : Sécurisation des infrastructures modernes',
+        slug: 'zero-trust-architecture',
+        summary: 'Guide complet sur l\'implémentation d\'une architecture Zero Trust.',
         content: this.getSampleMarkdownContent('cybersecurity'),
         author: 'CyberGarage Team',
         publishedDate: new Date('2024-11-25'),
