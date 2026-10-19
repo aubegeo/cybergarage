@@ -79,6 +79,7 @@ export const ARTICLE_CATALOG: Record<string, string[]> = {
     'onduleurs-solaires',
   ],
   pragmatic: [
+    'esn-ce-qui-disparait-vraiment',
     'learn-harness-engineering-revue-cours',
     'conventional-commits',
     'la-passion-retrecit-la-competence-dure',
