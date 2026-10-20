@@ -8,8 +8,6 @@ summary: "Tour d'horizon des dernières nouveautés de Claude Code : la skill /d
 readTime: 7
 ---
 
-# Claude Code en août 2026 : /design, auto mode par défaut et permissions en langage naturel
-
 Claude Code continue d'avancer vite, trop vite parfois pour suivre chaque changelog en détail.
 L'équipe produit d'Anthropic vient d'envoyer un point d'étape sur les dernières évolutions de
 l'outil, plusieurs d'entre elles méritant qu'on s'y arrête, surtout si on l'utilise au

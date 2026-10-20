@@ -8,8 +8,6 @@ summary: "NASA-STD-5001B fixe des facteurs de sécurité numériques précis (1.
 readTime: 8
 ---
 
-# NASA-STD-5001B : comment la NASA chiffre exactement la sécurité structurale
-
 En génie civil, personne ne s'étonne qu'un pont soit dimensionné avec une marge confortable au-dessus des charges qu'il subira réellement. En aérospatial, cette même logique se heurte à une contrainte que le bâtiment n'a pas, puisque chaque gramme envoyé en orbite a un coût de lancement direct. Sur-dimensionner « pour être tranquille » n'est pas gratuit, car cette marge se paie en carburant et en masse utile, quand elle ne fait pas la différence entre une mission viable et une mission annulée.
 
 C'est exactement le problème que résout la norme **NASA-STD-5001B w/Change 3** (*Structural Design and Test Factors of Safety for Spaceflight Hardware*), révisée le 24 octobre 2022 et toujours au statut ACTIVE. Son objectif, tel qu'énoncé dans son propre texte, est double : « define factors which ensure safe and reliable structural designs » d'un côté, « reduce space project costs and schedules by enhancing the commonality of use of hardware designs among NASA flight projects, Centers, and their contractors » de l'autre. Autrement dit, il n'y a pas de facteur de sécurité arbitraire à 2x partout mais des chiffres différenciés, calibrés matériau par matériau et stratégie de vérification par stratégie de vérification.

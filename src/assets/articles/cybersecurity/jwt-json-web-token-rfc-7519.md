@@ -8,8 +8,6 @@ summary: "Le JWT est partout dans l'authentification moderne, mais rarement lu �
 readTime: 8
 ---
 
-# JWT (RFC 7519) : ce que dit vraiment la spécification des JSON Web Tokens
-
 Le JWT (*JSON Web Token*) s'est imposé comme le format de facto pour transporter des informations d'authentification et d'autorisation entre un client et un serveur (sessions stateless, tokens OAuth 2.0, SSO). Mais la plupart des développeurs le manipulent via une bibliothèque sans jamais avoir ouvert le texte qui le définit, à savoir la [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519), publiée en mai 2015 par l'IETF. Elle en donne une définition précise et volontairement minimale, qu'il vaut la peine de connaître pour éviter les erreurs d'implémentation les plus courantes.
 
 ## Ce qu'est officiellement un JWT

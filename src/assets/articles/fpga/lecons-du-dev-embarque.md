@@ -8,8 +8,6 @@ summary: "L'embarqué traîne une réputation de monde poussiéreux. En réalit�
 readTime: 7
 ---
 
-# Ce que les devs applicatifs peuvent réapprendre du dev embarqué
-
 Il y a un cliché tenace selon lequel l'embarqué serait un monde à part, peuplé de développeurs restés à l'âge de l'assembleur, à bricoler dans leur coin. La réalité est pourtant presque inverse, car beaucoup des « bonnes pratiques modernes » qu'on (re)découvre côté applicatif (sobriété des ressources, écoconception, pensée système) sont le quotidien de l'embarqué depuis vingt ans, non par mode mais par **contrainte**.
 
 Et ces contraintes reviennent frapper à la porte du monde applicatif : la RAM coûte cher, un data center ne se construit plus d'un claquement de doigts et le patron commence à regarder la facture cloud de travers. Voici ce que la culture embarquée peut nous réapprendre.

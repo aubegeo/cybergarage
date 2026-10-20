@@ -8,8 +8,6 @@ summary: "Introduite dans le Bluetooth Core Specification 6.0, la fonctionnalit�
 readTime: 8
 ---
 
-# Bluetooth Channel Sounding : mesurer une distance sans se faire piéger par un relais
-
 Un badge de voiture sans clé qui déverrouille le véhicule alors qu'il est resté posé sur la table de la cuisine, à vingt mètres de là, illustre le principe d'une attaque par relais (« relay attack »), qui exploite le fait qu'un système Bluetooth ou RFID classique ne sait pas *vraiment* mesurer une distance puisqu'il se contente d'estimer, via la puissance du signal reçu (RSSI), si l'appareil est « proche ». Un attaquant équipé de deux boîtiers radio peut relayer le signal entre le badge et la voiture sans jamais le posséder physiquement.
 
 Le Bluetooth SIG (l'organisme qui édite la norme Bluetooth) a introduit une réponse technique à ce problème dans le **Bluetooth Core Specification 6.0**, à savoir la fonctionnalité **Channel Sounding**. Elle permet à deux appareils Bluetooth Low Energy de calculer leur distance réelle avec une précision de l'ordre de la dizaine de centimètres, tout en résistant à ce type d'attaque. Cet article s'appuie sur les pages techniques officielles du Bluetooth SIG consacrées à Channel Sounding et à l'aperçu du Core 6.0.

@@ -8,8 +8,6 @@ summary: "Vous passez des semaines à apprendre votre métier à un agent, puis 
 readTime: 6
 ---
 
-# Hermes Agent : séparer le modèle du harnais et ce que cette promesse vaut vraiment
-
 Il y a un coût caché dans le travail avec un agent IA, qui n'apparaît sur aucune facture, puisque vous passez des semaines à lui expliquer votre métier, à corriger ses réponses, à construire des procédures autour de lui. Puis un meilleur modèle sort, ou celui que vous utilisez change de tarif, ou votre outil perd l'accès à un fournisseur.
 
 La question devient alors simple à formuler et difficile à régler. Pouvez-vous changer de moteur sans jeter tout ce que vous avez bâti autour ?

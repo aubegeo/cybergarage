@@ -8,8 +8,6 @@ summary: "Design et implémentation d'architectures de réseaux intelligents ave
 readTime: 16
 ---
 
-# Architecture de réseaux intelligents et protocoles IoT avancés
-
 ## Introduction
 
 Les réseaux intelligents (Smart Networks) représentent l'évolution des infrastructures de télécommunications vers des systèmes auto-adaptatifs, optimisés et résilients. L'intégration des technologies IoT, 5G et edge computing ouvre de nouvelles possibilités pour les applications critiques.

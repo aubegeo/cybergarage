@@ -8,8 +8,6 @@ summary: "Entre le discours LinkedIn de la fin des devs et la réalité du terra
 readTime: 8
 ---
 
-# On ne disparaît pas, on monte d'un étage : ce que la GenAI change vraiment pour les devs
-
 Impossible d'ouvrir LinkedIn ces derniers mois sans tomber sur un post annonçant la fin des
 développeurs : études plaçant le métier en tête des professions « menacées », promesses
 marketing de x100 sur la productivité, juniors qu'on n'embaucherait plus. Le tout produit un

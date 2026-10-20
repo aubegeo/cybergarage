@@ -8,8 +8,6 @@ summary: "Architecture et déploiement d'applications microservices avec Docker 
 readTime: 15
 ---
 
-# Microservices avec Docker et Kubernetes : Guide pratique
-
 ## Introduction
 
 L'architecture microservices combinée à la containerisation Docker et l'orchestration Kubernetes offre une solution scalable et résiliente pour les applications modernes.

@@ -8,8 +8,6 @@ summary: "Architecture FPGA optimisée pour le traitement vidéo haute performan
 readTime: 18
 ---
 
-# Conception de circuits FPGA pour traitement vidéo temps réel
-
 ## Introduction
 
 Le traitement vidéo temps réel nécessite des architectures hautement parallèles. Les FPGA offrent la flexibilité et les performances requises pour ces applications critiques.

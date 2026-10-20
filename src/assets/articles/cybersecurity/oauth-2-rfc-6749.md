@@ -8,8 +8,6 @@ summary: "OAuth 2.0 (RFC 6749) permet à une application d'accéder à des resso
 readTime: 7
 ---
 
-# OAuth 2.0 démystifié : rôles, grants et tokens
-
 « Se connecter avec Google », « autoriser cette app à accéder à votre agenda »… Derrière ces interactions se cache presque toujours **OAuth 2.0**, le cadre d'autorisation standardisé par la [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) (IETF, *Standards Track*, octobre 2012).
 
 Le problème qu'il résout est fondamental, puisqu'il faut permettre à une application tierce d'accéder à *une partie* de vos données **sans lui confier votre mot de passe**. OAuth introduit une couche d'autorisation qui délivre des **jetons à portée limitée** plutôt que de partager les identifiants.

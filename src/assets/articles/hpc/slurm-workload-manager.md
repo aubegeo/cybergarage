@@ -8,8 +8,6 @@ summary: "Plongée dans Slurm Workload Manager, l'ordonnateur de jobs open sourc
 readTime: 7
 ---
 
-# Slurm : comment un ordonnanceur open source pilote la majorité des supercalculateurs
-
 Quand on pense « supercalculateur », on imagine des armoires de racks et des benchmarks TOP500.
 Mais avant même de faire tourner le moindre calcul, il faut résoudre un problème plus terre à
 terre, à savoir déterminer qui a le droit d'utiliser quels nœuds, pendant combien de temps et

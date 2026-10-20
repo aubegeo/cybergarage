@@ -8,8 +8,6 @@ summary: "Guide complet sur l'implémentation d'une architecture Zero Trust pour
 readTime: 12
 ---
 
-# Architecture Zero Trust : Sécurisation des infrastructures modernes
-
 ## Introduction
 
 L'architecture **Zero Trust** révolutionne l'approche traditionnelle de la sécurité informatique en adoptant le principe "*Never trust, always verify*".

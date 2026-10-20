@@ -8,8 +8,6 @@ summary: "Zephyr, l'OS temps réel open source porté par la Linux Foundation, d
 readTime: 8
 ---
 
-# Zephyr RTOS : comment les threads coopératifs et préemptibles structurent le temps réel embarqué
-
 Sur un serveur, un thread qui attend un peu plus longtemps que prévu passe rarement inaperçu. Sur un microcontrôleur qui pilote un capteur, un actionneur ou une liaison radio, ce même retard peut être la différence entre un système qui fonctionne et un système qui rate sa fenêtre temporelle. C'est précisément le problème que Zephyr, l'OS temps réel open source de la Linux Foundation, adresse au niveau du noyau grâce à un modèle de threads volontairement explicite sur qui peut interrompre qui et à quel moment.
 
 Zephyr se définit comme « a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications », selon la [documentation officielle du projet](https://docs.zephyrproject.org/latest/introduction/index.html). Il est distribué sous licence Apache 2.0 et tourne sur un large éventail d'architectures : ARC, ARM (Cortex-M, Cortex-A, Cortex-R), x86, MIPS, OpenRISC, RISC-V, SPARC V8 et Xtensa. Son organisation interne repose sur des « subsystems », chaque sous-système « handles specific functionality or provides certain services » (réseau, système de fichiers, pilotes, gestion d'énergie…), le tout étant pensé pour rester configurable et n'embarquer que ce dont l'application a réellement besoin, ce que la doc résume en ces termes, « Allows an application to incorporate only the capabilities it needs as it needs them. »

@@ -8,8 +8,6 @@ summary: "Une convention légère au-dessus des messages de commit, qui rend l'h
 readTime: 8
 ---
 
-# Conventional Commits 1.0.0 : structurer ses messages de commit pour de vrai
-
 Combien de fois avez-vous lu un historique Git peuplé de messages du type « fix », « wip », « update stuff » ? Ce n'est pas seulement inélégant, puisque l'historique obtenu ne permet de rien tirer automatiquement. La spécification **Conventional Commits** propose de résoudre ce problème avec une contrainte minimale. Telle que définie par la [source officielle](https://www.conventionalcommits.org/en/v1.0.0/), il s'agit d'« une convention légère au-dessus des messages de commit » (« a lightweight convention on top of commit messages ») qui « fournit un ensemble simple de règles pour créer un historique de commit explicite ; ce qui facilite l'écriture d'outils automatisés par-dessus ».
 
 Il faut surtout retenir que cette convention **s'articule avec le Semantic Versioning (SemVer)**, en décrivant dans les commits eux-mêmes les fonctionnalités, correctifs et changements cassants apportés au code.

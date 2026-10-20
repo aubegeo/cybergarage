@@ -8,8 +8,6 @@ summary: "Le NASA Systems Engineering Handbook (NASA/SP-2016-6105 Rev2) formalis
 readTime: 8
 ---
 
-# Le moteur d'ingénierie système de la NASA : 17 processus pour ne pas perdre le contrôle d'un projet complexe
-
 Un lanceur, une sonde martienne ou un rover partagent avec n'importe quel projet technique ambitieux un même problème, à savoir que des centaines de sous-systèmes conçus par des équipes différentes doivent finir par former **un seul produit qui fonctionne**, dans les délais, dans le budget, sans surprise le jour du lancement. La NASA a formalisé sa réponse à ce problème dans le **NASA Systems Engineering Handbook** (référence officielle **NASA/SP-2016-6105 Rev2**, qui succède à la révision de 2007), un document destiné à « fournir une orientation générale et des informations sur l'ingénierie système utiles à la communauté NASA ». Ce n'est pas un manuel réservé aux fusées mais une méthode pour piloter la complexité technique, qui éclaire directement ce que font, à leur échelle, un lead dev ou un architecte logiciel.
 
 ## Ce que la NASA appelle « ingénierie système »

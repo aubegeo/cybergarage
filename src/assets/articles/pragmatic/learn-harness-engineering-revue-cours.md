@@ -8,8 +8,6 @@ summary: "Un cours open source sur l'ingénierie du harnais a dépassé 18 000 �
 readTime: 8
 ---
 
-# learn-harness-engineering : ce qu'un cours à 18 000 étoiles apporte vraiment
-
 Depuis le printemps 2026, une idée s'est imposée dans la manière de parler des agents de code. Un agent se décompose en un modèle plus un harnais, le harnais désignant tout ce qui entoure les poids du modèle et qui lui permet d'agir, de se souvenir et de s'arrêter. OpenAI a publié sa vision de la question, Anthropic la sienne. Le mot est désormais entré au Technology Radar de Thoughtworks.
 
 Restait l'étape que personne ne faisait. Transformer cette idée en quelque chose qu'un développeur puisse appliquer lundi matin à son propre dépôt. C'est ce que tente [learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering), un cours open source sous licence MIT, créé le 29 mars 2026, qui compte aujourd'hui 14 chapitres, 8 projets, un script d'audit, une skill réutilisable et des traductions en quinze langues.

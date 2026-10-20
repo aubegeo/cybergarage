@@ -8,8 +8,6 @@ summary: "Les virtual threads, finalisés dans Java 21 (JEP 444), rendent le sty
 readTime: 8
 ---
 
-# Java Virtual Threads : le thread-per-request qui passe (enfin) à l'échelle
-
 Pendant des années, écrire du code serveur simple (un thread par requête) se heurtait à un mur, puisque les threads de la JVM sont des threads du système d'exploitation, coûteux et limités en nombre. Pour tenir la charge, on basculait vers du code asynchrone (callbacks, `CompletableFuture`, réactif), plus performant mais nettement plus dur à écrire, déboguer et profiler.
 
 Les **virtual threads**, finalisés dans **Java 21** par le [JEP 444](https://openjdk.org/jeps/444), changent la donne. Cet article s'appuie directement sur ce texte officiel, que sa propre introduction résume ainsi, *« Introduce virtual threads to the Java Platform. Virtual threads are lightweight threads that dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications. »*

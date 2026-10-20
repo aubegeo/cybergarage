@@ -8,8 +8,6 @@ summary: "Comment l'ESP-IDF matérialise le protocole I2C générique dans son A
 readTime: 9
 ---
 
-# I2C sur ESP32 : maîtriser la nouvelle API bus-device de l'ESP-IDF
-
 Sur un ESP32, il suffit souvent de deux fils, SDA et SCL, pour parler à un capteur de température, un écran
 OLED ou une centrale inertielle. Derrière cette simplicité apparente se cache un
 protocole avec ses propres règles de synchronisation, ses limites de fréquence et ses pièges

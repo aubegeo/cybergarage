@@ -8,8 +8,6 @@ summary: "Décryptage, à partir des pages officielles USB-IF, de ce que couvren
 readTime: 8
 ---
 
-# USB4 et USB Power Delivery : ce que dit vraiment la spécification USB-IF
-
 Un câble USB-C aujourd'hui peut transporter de la vidéo 8K, un réseau, du stockage rapide et 240W
 de puissance en même temps, dans les deux sens, sur le même fil. Ce n'est pas du marketing mais littéralement ce que définissent deux spécifications maintenues par l'USB Implementers Forum
 (USB-IF), l'organisme qui gouverne le standard USB, à savoir **USB4** pour la partie données et **USB Power Delivery (USB PD)** pour la partie énergie. Ces deux textes sont trop souvent résumés en une

@@ -8,8 +8,6 @@ summary: "Le DOE américain distingue trois familles de véhicules électriques 
 readTime: 7
 ---
 
-# BEV, PHEV, HEV : ce que « voiture électrique » cache vraiment
-
 Dans une conversation, « voiture électrique » désigne à peu près n'importe quel véhicule qui a un moteur électrique sous le capot, mais ce raccourci mélange des architectures techniques radicalement différentes (dont une seule a besoin d'une prise pour fonctionner). Le **Alternative Fuels Data Center (AFDC)**, portail de référence du Department of Energy américain, pose une distinction claire entre trois catégories : BEV, PHEV et HEV. Cette clarification n'est pas que sémantique, puisqu'elle détermine si un véhicule dépend ou non d'une infrastructure de recharge, ce qui est exactement le genre de dépendance qu'on apprend à identifier quand on conçoit un système, qu'il soit électrique ou logiciel.
 
 ## Trois architectures, trois logiques différentes

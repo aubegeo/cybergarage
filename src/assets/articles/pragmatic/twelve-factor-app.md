@@ -8,8 +8,6 @@ summary: "La méthodologie Twelve-Factor App formalise en 12 principes (portabil
 readTime: 8
 ---
 
-# The Twelve-Factor App : 12 principes pour des applications prêtes pour le cloud
-
 Pourquoi certaines applications se déploient sans douleur, scalent horizontalement et se comportent pareil en dev et en prod, tandis que d'autres deviennent un cauchemar dès qu'on quitte le poste du développeur ? En 2011, des ingénieurs de Heroku ont synthétisé, à partir de centaines de déploiements, une méthodologie devenue une référence : **The Twelve-Factor App** ([12factor.net](https://12factor.net)).
 
 L'objectif, tel que défini par la source officielle, est de produire des applications qui utilisent des **formats déclaratifs** (onboarding rapide), **maximisent la portabilité** entre environnements, se **déploient sur le cloud** sans friction, **minimisent l'écart entre dev et prod** et **scalent sans refonte architecturale**, la méthode étant valable dans n'importe quel langage.

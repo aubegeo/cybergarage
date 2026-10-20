@@ -8,8 +8,6 @@ summary: "Un agent, c'est un modèle plus un harnais. Les listes de composants c
 readTime: 5
 ---
 
-# Anatomie du harnais d'un agent : ce qui est normalisé, et ce qui ne l'est pas
-
 L'équation circule depuis quelques mois dans les milieux produit. Un agent, c'est un modèle plus un harnais, le harnais désignant tout ce qui n'est pas le modèle et qui lui permet d'agir, de se souvenir et de s'arrêter. Les décompositions en six, huit ou dix composants ne manquent pas.
 
 Ce qui manque davantage, c'est l'étape suivante. Pour chacun de ces composants, existe-t-il une spécification publique, ou chaque éditeur fait-il comme il l'entend ? La réponse détermine ce que vous pouvez porter d'un outil à l'autre, et ce que vous reconstruirez à chaque changement.

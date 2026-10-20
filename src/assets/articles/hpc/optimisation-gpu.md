@@ -8,8 +8,6 @@ summary: "Techniques avancées d'optimisation pour maximiser les performances de
 readTime: 18
 ---
 
-# Optimisation mémoire et accélération GPU en calcul scientifique
-
 ## Introduction
 
 Le calcul haute performance (HPC) moderne s'appuie massivement sur les architectures hétérogènes combinant CPU et GPU. L'optimisation des transferts mémoire et l'exploitation efficace du parallélisme massif sont cruciales pour atteindre des performances optimales.

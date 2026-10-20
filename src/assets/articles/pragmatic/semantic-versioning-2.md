@@ -8,8 +8,6 @@ summary: "Derrière les trois nombres MAJOR.MINOR.PATCH se cache une règle simp
 readTime: 5
 ---
 
-# Semantic Versioning : donner du sens à vos numéros de version
-
 `1.4.2`, `2.0.0`, `3.1.0-beta.1`… Un numéro de version peut n'être qu'une étiquette arbitraire ou bien porter une **information précise** sur ce qui a changé, ce qui est tout l'objet de **Semantic Versioning 2.0.0** ([semver.org](https://semver.org/)), qui transforme le versioning en contrat.
 
 ## La règle fondamentale

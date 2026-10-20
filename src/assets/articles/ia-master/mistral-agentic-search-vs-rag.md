@@ -8,8 +8,6 @@ summary: "Mistral AI a lancé Agentic Search, une alternative au RAG classique o
 readTime: 8
 ---
 
-# RAG classique vs Agentic Search : le retrieval devient une investigation
-
 Imaginons que je veuille poser une question à un LLM sur les documents internes de mon entreprise : contrats, documentation technique, procédures, pages Confluence. Le modèle ne connaît pas ces documents et je ne veux évidemment pas le réentraîner à chaque mise à jour. La question devient donc de savoir comment faire répondre un LLM à partir de mes propres documents.
 
 C'est le problème que résout le **RAG** (Retrieval-Augmented Generation). Et c'est précisément sur ce terrain que Mistral AI a annoncé, le 20 août 2026, une approche différente, l'[**Agentic Search**](https://mistral.ai/news/agentic-search/).

@@ -8,8 +8,6 @@ summary: "Avant de fine-tuner ou de changer de modèle, il y a le prompt, puisqu
 readTime: 6
 ---
 
-# Prompt engineering avec Claude : les techniques officielles d'Anthropic
-
 Face à un modèle qui ne répond pas tout à fait comme on le voudrait, le premier réflexe n'est ni le fine-tuning ni le changement de modèle mais **d'améliorer le prompt**. La [documentation officielle d'Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) formalise cette démarche. Cet article s'appuie sur cette source.
 
 ## D'abord : est-ce le bon levier ?

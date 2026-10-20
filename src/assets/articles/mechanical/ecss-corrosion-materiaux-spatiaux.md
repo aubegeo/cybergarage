@@ -9,8 +9,6 @@ readTime: 7
 ---
 
 
-# Corrosion spatiale : ce que dit la norme ECSS-Q-ST-70-14C sur les matériaux métalliques
-
 Un satellite ou un lanceur ne passe pas sa vie entière dans le vide spatial. Avant le
 décollage, il est fabriqué, testé, stocké, transporté et intégré, parfois pendant des
 années, dans des environnements terrestres bien plus hostiles pour un métal que l'orbite

@@ -8,8 +8,6 @@ summary: "Design d'onduleurs haute efficacité pour systèmes photovoltaïques a
 readTime: 14
 ---
 
-# Conception de circuits de puissance pour onduleurs solaires
-
 ## Introduction
 
 Les onduleurs photovoltaïques convertissent l'énergie DC des panneaux solaires en AC compatible réseau. L'optimisation de leur efficacité et fiabilité représente un défi technique majeur.

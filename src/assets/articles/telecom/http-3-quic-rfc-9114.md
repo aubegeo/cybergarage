@@ -8,8 +8,6 @@ summary: "HTTP/3 (RFC 9114) transporte la sémantique HTTP non plus sur TCP, mai
 readTime: 7
 ---
 
-# HTTP/3 et QUIC : pourquoi le web abandonne TCP
-
 Pendant trente ans, le web a reposé sur une constante, à savoir HTTP au-dessus de TCP. HTTP/1.1, puis HTTP/2, ont fait évoluer la couche applicative, mais le transport restait TCP. **HTTP/3** rompt avec cette habitude puisqu'il conserve la sémantique HTTP mais change de transport, en s'appuyant sur **QUIC**, au-dessus d'**UDP**.
 
 Cet article s'appuie sur la [RFC 9114](https://www.rfc-editor.org/rfc/rfc9114.html) (« HTTP/3 »), document *Standards Track* édité par M. Bishop et publié en juin 2022.

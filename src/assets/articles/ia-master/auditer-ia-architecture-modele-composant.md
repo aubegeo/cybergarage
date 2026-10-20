@@ -8,8 +8,6 @@ summary: "Premier volet d'une série sur l'audit de logiciels IA, qui explique p
 readTime: 7
 ---
 
-# Auditer une architecture IA : le modèle n'est qu'un composant de plus
-
 Dès qu'un projet embarque de l'IA, la conversation part presque toujours du même endroit :
 « quel modèle utilisez-vous ? », « GPT ou Claude ? », « quelle taille de contexte ? ». Ce sont
 des questions de configuration, pas des questions d'architecture. Et c'est exactement le

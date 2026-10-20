@@ -8,8 +8,6 @@ summary: "Thomas a quitté son poste de dev senior pour faire des jeux, sa vraie
 readTime: 7
 ---
 
-# La passion rétrécit, la compétence dure : ce qu'un dev qui a tout lâché m'a appris
-
 Thomas avait tout pour réussir, avec cinq ans de Java/Spring dans une boîte de conseil, une bonne réputation et des projets qui tournaient, mais un soir de novembre il a envoyé sa lettre de démission pour faire ce dont il rêvait depuis l'adolescence, c'est-à-dire des jeux vidéo, dans un studio indie, en solo, avec C++ et OpenGL, la passion se trouvant enfin libérée. Dix-huit mois plus tard, il m'a rappelé, non pas pour me dire que ça marchait mais pour me dire quelque chose de beaucoup plus utile.
 
 ## Ce que la passion ne dit pas au départ

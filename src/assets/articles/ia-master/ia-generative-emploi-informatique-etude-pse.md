@@ -8,8 +8,6 @@ summary: "Un chiffre circule depuis septembre 2026 selon lequel les offres d'emp
 readTime: 6
 ---
 
-# IA générative et emploi informatique : ce que dit vraiment l'étude de la Paris School of Economics
-
 Depuis début septembre 2026, un chiffre tourne dans la presse spécialisée et sur les réseaux. Les offres d'emploi en informatique auraient chuté de plus de 50 % sous l'effet de l'IA générative. La source citée est un travail de deux économistes de la Paris School of Economics, Marie-Renée Andreescu et Éric Maurin.
 
 Le papier existe, il est en accès libre et il est solide. Mais ce chiffre de 50 % n'y désigne pas ce qu'on lui fait dire. Voici ce que le document contient réellement.

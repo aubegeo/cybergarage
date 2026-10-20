@@ -8,8 +8,6 @@ summary: "FMI 3.0 est le standard ouvert qui permet d'échanger des modèles dyn
 readTime: 8
 ---
 
-# FMI : le standard qui fait parler entre eux les simulateurs multi-physiques
-
 Imaginez un projet automobile où le modèle du moteur vient d'un outil, celui de la boîte de
 vitesses d'un autre, celui de la dynamique du véhicule d'un troisième tandis que le contrôleur logiciel
 est simulé dans un quatrième environnement. Sans standard commun, faire dialoguer ces briques

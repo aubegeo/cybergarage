@@ -8,8 +8,6 @@ summary: "Finalisés dans Java 16 (JEP 395), les records offrent une syntaxe con
 readTime: 6
 ---
 
-# Java Records : des porteurs de données transparents et immuables
-
 Combien de fois avez-vous écrit une classe Java « bête » (quelques champs, un constructeur, des getters, `equals()`, `hashCode()`, `toString()`) juste pour transporter de la donnée ? Les **records**, finalisés dans **Java 16** par le [JEP 395](https://openjdk.org/jeps/395), répondent à ce besoin avec une syntaxe minimale.
 
 ## Définition officielle

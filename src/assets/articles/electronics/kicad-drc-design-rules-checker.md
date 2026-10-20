@@ -8,8 +8,6 @@ summary: "Le Design Rules Checker de KiCad détecte automatiquement courts-circu
 readTime: 9
 ---
 
-# KiCad DRC : le vérificateur de règles qui évite les PCB défectueux
-
 Un PCB qui a l'air propre à l'écran peut cacher un court-circuit invisible à l'œil, une piste
 trop fine pour supporter le courant prévu, ou un espacement entre pastilles insuffisant pour
 la précision du fabricant. Ce genre de défaut ne se voit pas en zoomant sur le schéma et ne se

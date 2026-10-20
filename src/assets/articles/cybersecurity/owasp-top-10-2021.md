@@ -8,8 +8,6 @@ summary: "L'OWASP Top 10 est la référence mondiale des risques de sécurité d
 readTime: 9
 ---
 
-# OWASP Top 10 (2021) : les 10 risques de sécurité web à connaître
-
 L'**OWASP Top 10** est le document de sensibilisation le plus reconnu en sécurité applicative web. Publié par l'*Open Worldwide Application Security Project*, il classe les dix catégories de risques les plus critiques, à partir de données collectées sur un large ensemble d'applications et complétées par une enquête auprès des professionnels du secteur.
 
 Voici l'édition **2021**, chaque risque étant rattaché à sa **fiche officielle OWASP**, dans l'esprit « une affirmation, une source ».

@@ -8,8 +8,6 @@ summary: "Comment connecter proprement un modèle d'IA à vos données et vos ou
 readTime: 7
 ---
 
-# Le Model Context Protocol (MCP) : l'USB-C des applications IA
-
 Un modèle de langage, seul, ne sait rien de votre calendrier, de votre base de données ou de vos fichiers. Pour qu'un assistant IA devienne réellement utile, il faut le **connecter** au monde extérieur. Le problème est que jusqu'ici chaque intégration était sur mesure (un connecteur par outil, par application, par modèle), ce qui donnait une explosion combinatoire.
 
 Le **Model Context Protocol (MCP)** répond exactement à ce problème. Cet article s'appuie sur la [documentation officielle](https://modelcontextprotocol.io).

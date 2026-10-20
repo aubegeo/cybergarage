@@ -8,8 +8,6 @@ summary: "Analyse technique des systèmes de freinage régénératif et leur imp
 readTime: 8
 ---
 
-# Systèmes de freinage régénératif dans les véhicules électriques
-
 ## Introduction
 
 Le freinage régénératif représente une technologie clé dans l'optimisation de l'efficacité énergétique des véhicules électriques. Cette technique permet de récupérer l'énergie cinétique du véhicule lors des phases de décélération.

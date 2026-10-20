@@ -8,8 +8,6 @@ summary: "Depuis 1993, le classement TOP500 ordonne les supercalculateurs mondia
 readTime: 7
 ---
 
-# TOP500 : comment classe-t-on vraiment les supercalculateurs les plus puissants au monde
-
 Deux fois par an, en juin et en novembre, le monde du calcul haute performance retient son
 souffle, puisque le [TOP500](https://top500.org/project/) publie son classement des 500 supercalculateurs
 les plus puissants de la planète. Derrière ce rituel bisannuel se cache une question simple en
