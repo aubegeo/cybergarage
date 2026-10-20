@@ -231,7 +231,21 @@ export class SeoService {
       [CategoryType.PRAGMATIC]: [
         'bonnes pratiques', 'ingénierie pragmatique', 'méthodologie', 'leadership',
         'gestion de projet', 'architecture système', 'code quality', 'soft skills', 'best practices'
-      ]
+      ],
+        // Ces trois categories avaient des articles et une route mais aucune
+        // entree dans CategoryType : l'y ajouter les rend obligatoires ici.
+        [CategoryType.HPC]: [
+          'calcul haute performance', 'HPC', 'GPU', 'CUDA', 'calcul parallele',
+          'optimisation', 'bande passante memoire', 'supercalculateur'
+        ],
+        [CategoryType.TELECOM]: [
+          'telecommunications', 'reseaux', '5G', '6G', 'IoT', 'objets connectes',
+          'protocoles reseau', 'Bluetooth', 'radio'
+        ],
+        [CategoryType.SIMULATION]: [
+          'simulation', 'modelisation numerique', 'simulation physique',
+          'analyse predictive', 'jumeau numerique', 'validation de modele'
+        ]
     };
 
     return keywordMap[category] || [];
