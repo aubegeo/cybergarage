@@ -35,47 +35,69 @@ export const routes: Routes = [
   },
   {
     path: 'automobile',
-    loadComponent: () => import('./features/automobile/automobile.component').then(m => m.AutomobileComponent)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'automobile' }
   },
   {
     path: 'dev-info',
-    loadComponent: () => import('./features/dev-info/dev-info.component').then(m => m.DevInfoComponent)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'dev-info' }
   },
   {
     path: 'ia-master',
-    loadComponent: () => import('./features/ia-master/ia-master.component').then(m => m.IaMasterComponent)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'ia-master' }
   },
   {
     path: 'cybersecurity',
-    loadChildren: () => import('./features/cybersecurity/cybersecurity-module').then(m => m.CybersecurityModule)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'cybersecurity' }
   },
   {
     path: 'fpga',
-    loadChildren: () => import('./features/fpga/fpga-module').then(m => m.FpgaModule)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'fpga' }
   },
   {
     path: 'mechanical',
-    loadChildren: () => import('./features/mechanical/mechanical-module').then(m => m.MechanicalModule)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'mechanical' }
   },
   {
     path: 'electronics',
-    loadChildren: () => import('./features/electronics/electronics-module').then(m => m.ElectronicsModule)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'electronics' }
   },
   {
     path: 'pragmatic',
-    loadChildren: () => import('./features/pragmatic/pragmatic-module').then(m => m.PragmaticModule)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'pragmatic' }
   },
   {
     path: 'hpc',
-    loadComponent: () => import('./features/hpc/hpc.component').then(m => m.HpcComponent)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'hpc' }
   },
   {
     path: 'telecom',
-    loadComponent: () => import('./features/telecom/telecom.component').then(m => m.TelecomComponent)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'telecom' }
   },
   {
     path: 'simulation',
-    loadComponent: () => import('./features/simulation/simulation.component').then(m => m.SimulationComponent)
+      loadComponent: () => import('./features/category/category-page.component')
+        .then(m => m.CategoryPageComponent),
+      data: { category: 'simulation' }
   },
   {
     path: '**',

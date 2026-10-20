@@ -1,10 +1,22 @@
+// Style partagé des 11 pages de catégorie.
+//
+// Dérivé de automobile.component.scss, qui était dupliqué en 6 exemplaires ne
+// différant QUE par la couleur d'accent, en quatre endroits (mesuré : 8 lignes
+// de diff entre automobile et hpc, toutes des couleurs). Les couleurs passent
+// donc par --cat-accent et --cat-accent-2, posées par le composant selon la
+// catégorie, ce qui supprime la duplication sans changer le rendu.
+
+:host {
+  display: block;
+}
+
 .category-page {
   min-height: 100vh;
   background: var(--background-primary);
 }
 
 .page-header {
-  background: linear-gradient(135deg, #E74C3C 0%, #EC7063 100%);
+  background: linear-gradient(135deg, var(--cat-accent) 0%, var(--cat-accent-2) 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -64,7 +76,7 @@
   border: 1px solid var(--border-color);
 
   h2 {
-    color: #E74C3C;
+    color: var(--cat-accent);
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
@@ -100,7 +112,7 @@
   background: var(--background-secondary);
   padding: 1.5rem;
   border-radius: 8px;
-  border-left: 4px solid #E74C3C;
+  border-left: 4px solid var(--cat-accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -121,7 +133,7 @@
   }
 
   .article-tag {
-    background: #E74C3C;
+    background: var(--cat-accent);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
