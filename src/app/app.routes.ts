@@ -100,6 +100,10 @@ export const routes: Routes = [
       data: { category: 'simulation' }
   },
   {
+    path: 'mentions-legales',
+    loadComponent: () => import('./pages/mentions-legales/mentions-legales').then(m => m.MentionsLegalesComponent)
+  },
+  {
     path: '**',
     loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFoundComponent)
   }

@@ -31,6 +31,7 @@ export const serverRoutes: ServerRoute[] = [
   { path: 'competences', renderMode: RenderMode.Prerender },
   { path: 'projets', renderMode: RenderMode.Prerender },
   { path: 'contact', renderMode: RenderMode.Prerender },
+  { path: 'mentions-legales', renderMode: RenderMode.Prerender },
   { path: 'automobile', renderMode: RenderMode.Prerender },
   { path: 'dev-info', renderMode: RenderMode.Prerender },
   { path: 'ia-master', renderMode: RenderMode.Prerender },
